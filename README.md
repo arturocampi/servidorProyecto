@@ -1,4 +1,4 @@
 # Proyecto_Servidor
 
-**pagina**
--->Añadida página de inicio con logo y nombre de la peliquería, inicio de sesión de gerente y acceso para clientes 
+**pagina (4/11)**
+-->Añadida página de inicio con logo y nombre de la peluquería, inicio de sesión de gerente y acceso para clientes 
