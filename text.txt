@@ -1,0 +1,8 @@
+CONTROLADOR (App.php)
+
+VISTAS
+    home
+    formulario
+    mostrar
+
+guardar en sessions las respuestas del formulario
