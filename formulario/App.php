@@ -51,6 +51,20 @@ class App
         include('views/formularioStaff.php');
     }
 
+    public function form()
+    {
+        session_start();
+        require('views/empleado.php');
+        $emp = new Empleado($_POST['nombre'], $_POST['apellido'], $_POST['edad'], $_POST['sexo'], $_POST['horario']);
+        $empleados[] = $emp;
+        $_SESSION['empleados'] = $empleados;
+        header('location:?method=formularioStaff');
+    }
+
+    public function mostrarEmpleados(){
+        include('views/mostrarEmpleados.php');
+    }
+
     public function logout()
     {
         session_destroy();

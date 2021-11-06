@@ -40,7 +40,7 @@
         <!-- nombre/apellidos -->
         <br>
         <label>Nombre</label><input type="text" value="" name="nombre"> <br>
-        <label>Apellido</label><input type="text" value="" name="apellidos"> <br>
+        <label>Apellido</label><input type="text" value="" name="apellido"> <br>
         <!-- edad -->
         <br>
         <label>Edad</label>
@@ -49,8 +49,8 @@
         <!-- radio -->
         <br>
         <label>Sexo: </label>
-        <input type="radio" name="sexo" value="male"> Varón
-        <input type="radio" name="sexo" value="female" checked> Mujer<br>
+        <input type="radio" name="sexo" value="male" checked> Hombre
+        <input type="radio" name="sexo" value="female"> Mujer<br>
         <!-- select -->
         <br>
         <label>Elige el horario: </label>
@@ -61,10 +61,9 @@
             </optgroup>
         </select>
         <br><br>
-        <input type="submit" value="Enviar">
-        <br>
-        <br>
-        <a href="?method=logout">Desconectar</a>
+        <input type="submit" value="Enviar"><br><br>
+        <a href="?method=logout">Desconectar</a><br><br>
+        <a href="?method=mostrarEmpleados">Ver lista de empleados</a>
     </form>
 </body>
 
