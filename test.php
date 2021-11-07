@@ -39,3 +39,12 @@ foreach ($empleado as $clave => $key) {
 }
 
 echo count($_SESSION['empleado']);
+
+
+if (isset($_SESSION['counter'])) {
+    $_SESSION['counter'] += 1;
+} else {
+    $_SESSION['counter'] = 1;
+}
+
+echo '<br><br><br>la cantidad de veces que se accede a esta página: <br><br><br>' . var_dump($_SESSION['counter']);

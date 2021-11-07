@@ -10,11 +10,13 @@
 
 <body>
     <?php
-    // mostrar array
-    if (count($_SESSION['empleados'])) {
-        foreach ($_SESSION['empleados'] as $key => $value) {
-            echo "<li>$key: $value</li>";
-        }
+    $empleados =  [];
+    $empleados = $_SESSION['empleados'];
+    // foreach ($empleados as $key => $value) {
+    //     echo "<li>$key: $value</li>";
+    // }
+    foreach ($empleados as $codigo => $nombre) {
+        echo "Código: $codigo Nombre: $nombre <br>";
     }
     echo '<li><a href="?method=home">Inicio</a></li>';
     ?>

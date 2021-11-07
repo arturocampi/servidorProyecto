@@ -2,7 +2,6 @@
 
 class App
 {
-
     public function run()
     {
         if (isset($_GET['method'])) {
@@ -11,24 +10,6 @@ class App
             $method = 'home';
         }
         $this->$method();
-    }
-
-    public function login()
-    {
-        include('views/login.php');
-    }
-
-    public function auth()
-    {
-        session_start();
-        $_SESSION['user'] = $_POST['user'];
-        $_SESSION['password'] = $_POST['password'];
-        if ($_SESSION['user'] == 'gerente' && $_SESSION['password'] == 'gerente') {
-            header('location:?method=formularioStaff');
-        } else {
-            echo "Credenciales incorrectas";
-            header('location:views/login.php');
-        }
     }
 
     public function reload()
@@ -41,33 +22,48 @@ class App
         include('views/home.php');
     }
 
-    public function cliente()
+    public function formularioEvento()
     {
-        include('views/cliente.php');
+        include('views/formularioEvento.php');
     }
 
-    public function formularioStaff()
+    public function formularioCliente()
     {
-        include('views/formularioStaff.php');
+        include('views/formularioCliente.php');
     }
 
-    public function form()
+    public function printCliente()
     {
         session_start();
-        require('views/empleado.php');
-        $emp = new Empleado($_POST['nombre'], $_POST['apellido'], $_POST['edad'], $_POST['sexo'], $_POST['horario']);
-        $empleados[] = $emp;
-        $_SESSION['empleados'] = $empleados;
-        header('location:?method=formularioStaff');
+        $datos = array(
+            'nombre' => $_POST['nombre'],
+            'apellidos' => $_POST['apellidos'],
+            'telefono' => $_POST['telefono'],
+            'email' => $_POST['email'],
+            'fecha' => $_POST['fecha'],
+            'sexo' => $_POST['sexo'],
+            'peinado' => $_POST['peinado'],
+        );
+        $_SESSION['datos'] = $datos;
+        include('views/mostrar.php');
     }
 
-    public function mostrarEmpleados(){
-        include('views/mostrarEmpleados.php');
-    }
-
-    public function logout()
+    public function printEvento()
     {
-        session_destroy();
-        $this->reload();
+        session_start();
+        $datos = array(
+            'nombre' => $_POST['nombre'],
+            'apellidos' => $_POST['apellidos'],
+            'empresa' => $_POST['empresa'],
+            'telefono'   => $_POST['telefono'],
+            'direccion' => $_POST['direccion'],
+            'email'  => $_POST['email'],
+            'fecha'  => $_POST['fecha'],
+            'tipo'  => $_POST['tipo'],
+            'personas'  => $_POST['personas'],
+            'informacion'  => $_POST['informacion'],
+        );
+        $_SESSION['datos'] = $datos;
+        include('views/mostrar.php');
     }
 }
