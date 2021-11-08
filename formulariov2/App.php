@@ -23,12 +23,8 @@ class App
         session_start();
         $_SESSION['user'] = $_POST['user'];
         $_SESSION['password'] = $_POST['password'];
-        if ($_SESSION['user'] == 'gerente' && $_SESSION['password'] == 'gerente') {
-            header('location:?method=formularioStaff');
-        } else {
-            echo "Credenciales incorrectas";
-            header('location:views/login.php');
-        }
+
+        header('location:?method=formularioStaff');
     }
 
     public function reload()
@@ -56,13 +52,11 @@ class App
         session_start();
         require('views/empleado.php');
         $emp = new Empleado($_POST['nombre'], $_POST['apellido'], $_POST['telefono'], $_POST['edad'], $_POST['sexo'], $_POST['horario'], $_POST['sueldo']);
-        if (isset($empleados)) {
-            $empleados = $emp;
-            $_SESSION['empleados'] = $empleados;
+        if (isset($_SESSION['empleados'])) {
+            array_push($_SESSION['empleados'],$empleados);
         } else {
-            $empleados = [];
-            $empleados = $emp;
-            $_SESSION['empleados'] = $empleados;
+            $_SESSION['empleados'] = [];
+            array_push($_SESSION['empleados'],$empleados);
         }
         // if (isset($empleados)) {
         //     $empleados[] = $emp;

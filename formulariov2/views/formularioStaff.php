@@ -5,12 +5,23 @@
     <meta charset="UTF-8">
     <title>Elementos de un formulario</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Gluten:wght@100&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=GlutenBold:wght@900&display=swap');
+        @font-face {
+            font-family: 'GlutenBold';
+            src: url('/fonts/Caveat');
+        }
+
+        @font-face {
+            font-family: 'Gluten';
+            src: url('/fonts/Gluten.ttf');
+        }
+
+        @font-face {
+            font-family: 'Caveat';
+            src: url('/fonts/Caveat.ttf');
+        }
 
         body {
-            background-color: #03fcad;
+     
             width: 1000px;
             margin: 5px auto;
             text-align: center;
