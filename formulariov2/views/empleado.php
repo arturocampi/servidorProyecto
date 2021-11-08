@@ -4,17 +4,21 @@ class Empleado
 {
     private $nombre;
     private $apellido;
+    private $telefono;
     private $edad;
     private $sexo;
     private $horario;
+    private $sueldo;
 
-    public function __construct($nombre, $apellido, $edad, $sexo, $horario)
+    public function __construct($nombre, $apellido, $telefono, $edad, $sexo, $horario, $sueldo)
     {
         $this->nombre = $nombre;
         $this->apellido = $apellido;
+        $this->telefono = $telefono;
         $this->edad = $edad;
         $this->sexo = $sexo;
         $this->horario = $horario;
+        $this->sueldo = $sueldo;
     }
 
     public function getNombre()
@@ -29,6 +33,6 @@ class Empleado
 
     public function __toString()
     {
-        return "Nombre: " . $this->nombre . " <br>Appelido: " . $this->saldo . " <br>Edad: " . $this->edad . " <br>Sexo: " . $this->sexo . " <br>Horario: " . $this->horario;
+        return "Nombre: " . $this->nombre . " <br>Appelido: " . $this->apellido . "<br>Telefono: " . $this->telefono . " <br>Edad: " . $this->edad . " <br>Sexo: " . $this->sexo . " <br>Horario: " . $this->horario . "<br>Sueldo: " . $this->sueldo;
     }
 }

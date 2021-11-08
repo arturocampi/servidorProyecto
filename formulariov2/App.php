@@ -55,8 +55,15 @@ class App
     {
         session_start();
         require('views/empleado.php');
-        $emp = new Empleado($_POST['nombre'], $_POST['apellido'], $_POST['edad'], $_POST['sexo'], $_POST['horario']);
-        $_SESSION['empleados'] = $emp; 
+        $emp = new Empleado($_POST['nombre'], $_POST['apellido'], $_POST['telefono'], $_POST['edad'], $_POST['sexo'], $_POST['horario'], $_POST['sueldo']);
+        if (isset($empleados)) {
+            $empleados = $emp;
+            $_SESSION['empleados'] = $empleados;
+        } else {
+            $empleados = [];
+            $empleados = $emp;
+            $_SESSION['empleados'] = $empleados;
+        }
         // if (isset($empleados)) {
         //     $empleados[] = $emp;
         //     $_SESSION['empleados'] = $empleados;

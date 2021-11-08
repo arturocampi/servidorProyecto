@@ -41,6 +41,9 @@
         <br>
         <label>Nombre</label><input type="text" value="" name="nombre"> <br>
         <label>Apellido</label><input type="text" value="" name="apellido"> <br>
+        <!-- telefono -->
+        <br>
+        <label>Telefono</label><input type="number" value="" name="telefono"> <br>
         <!-- edad -->
         <br>
         <label>Edad</label>
@@ -49,8 +52,8 @@
         <!-- radio -->
         <br>
         <label>Sexo: </label>
-        <input type="radio" name="sexo" value="male" checked> Hombre
-        <input type="radio" name="sexo" value="female"> Mujer<br>
+        <input type="radio" name="sexo" value="hombre" checked> Hombre
+        <input type="radio" name="sexo" value="mujer"> Mujer<br>
         <!-- select -->
         <br>
         <label>Elige el horario: </label>
@@ -60,6 +63,12 @@
                 <option>tardes</option>
             </optgroup>
         </select>
+        <!-- sueldo -->
+        <br>
+        <label>Sueldo</label>
+        <input type="number" name="sueldo">
+        <br>
+        <!-- enviar -->
         <br><br>
         <input type="submit" value="Enviar"><br><br>
         <a href="?method=logout">Desconectar</a><br><br>
