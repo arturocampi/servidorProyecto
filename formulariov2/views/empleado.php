@@ -2,13 +2,13 @@
 
 class Empleado
 {
-    private $nombre;
-    private $apellido;
-    private $telefono;
-    private $edad;
-    private $sexo;
-    private $horario;
-    private $sueldo;
+    public $nombre;
+    public $apellido;
+    public $telefono;
+    public $edad;
+    public $sexo;
+    public $horario;
+    public $sueldo;
 
     public function __construct($nombre, $apellido, $telefono, $edad, $sexo, $horario, $sueldo)
     {

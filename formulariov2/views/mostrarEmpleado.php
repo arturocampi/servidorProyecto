@@ -15,20 +15,21 @@
 
 <body>
     <?php
-    if (isset($printEmp)) {
-        $printEmp = $_SESSION['empleados'];
-    } else {
-        $printEmp =  [];
-        $printEmp = $_SESSION['empleados'];
+    $reflection = new ReflectionClass('Empleado');
+    $instance = $reflection->newInstanceWithoutConstructor();
+    $instance->__toString();
+
+    foreach ($instance as $key => $value) {
+        echo "{$key} : {$value}";
     }
-    $index = 1;
-    foreach ($printEmp as $value) {
-        echo "Empleado {$index}: <br>{$value}";
-        $index++;
-    }
-    echo "<br>{$printEmp}";
-    echo "<br><br><li><a href='?method=formularioStaff'>Añadir otro empleado</a></li>";
-    echo "<br><br><li><a href='?method=home'>Inicio</a></li>";
+
+    echo '<pre>';
+    var_dump($_SESSION['empleados']);
+    echo '</pre>';
+
+    echo "<li><a href='?method=formularioStaff'>Añadir otro empleado</a></li>";
+    echo "<li><a href='?method=destroySession'>Borrar empleados</a></li>";
+    echo "<li><a href='?method=home'>Inicio</a></li>";
     ?>
 </body>
 

@@ -7,9 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Gluten:wght@100&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=GlutenBold:wght@900&display=swap');
+        @font-face {
+            font-family: 'GlutenBold';
+            src: url('/fonts/Caveat');
+        }
+
+        @font-face {
+            font-family: 'Gluten';
+            src: url('/fonts/Gluten.ttf');
+        }
+
+        @font-face {
+            font-family: 'Caveat';
+            src: url('/fonts/Caveat.ttf');
+        }
 
         body {
             background-color: whitesmoke;
@@ -24,7 +35,7 @@
 
         a {
             font-weight: bold;
-            color: white;
+            color: black;
             font-size: x-large;
             text-decoration: none;
         }
@@ -37,8 +48,9 @@
         <form method="POST" action="?method=auth">
             <label>Usuario</label><input type="text" value="" name="user"><br>
             <label>Contraseña</label><input type="password" value="" name="password"><br><br>
-            <input type="submit" value="enviar">
+            <input type="submit" value="enviar"><br><br>
         </form>
+        <a href="?method=home">Inicio</a><br><br>
     </center>
 </body>
 

@@ -53,25 +53,22 @@ class App
         require('views/empleado.php');
         $emp = new Empleado($_POST['nombre'], $_POST['apellido'], $_POST['telefono'], $_POST['edad'], $_POST['sexo'], $_POST['horario'], $_POST['sueldo']);
         if (isset($_SESSION['empleados'])) {
-            array_push($_SESSION['empleados'],$empleados);
+            array_push($_SESSION['empleados'], $emp);
         } else {
             $_SESSION['empleados'] = [];
-            array_push($_SESSION['empleados'],$empleados);
+            array_push($_SESSION['empleados'], $emp);
         }
-        // if (isset($empleados)) {
-        //     $empleados[] = $emp;
-        //     $_SESSION['empleados'] = $empleados;
-        // } else {
-        //     $empleados = [];
-        //     $empleados[] = $emp;
-        //     $_SESSION['empleados'] = $empleados;
-        // }
         include('views/mostrarEmpleado.php');
+    }
+
+    public function destroySession()
+    {
+        session_destroy();
+        $this->reload();
     }
 
     public function logout()
     {
-        session_destroy();
         $this->reload();
     }
 }
