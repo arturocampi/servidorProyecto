@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Document</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
@@ -55,11 +55,8 @@
 </head>
 
 <body>
-    <img id="logo" src="../img/logo.png">
-    <h1>Bellissima</h1>
-    <?php require '../app/views/header.php';?>
-    <p><a href='../app/views/cliente.php'>Información para clientes</a></p>
-    <p><a href='?method=login'>Acceso Gerente</a></p>
+    <p><a href='?method=formularioCliente'>Formulario para clientes</a></p>
+    <p><a href='?method=formularioEvento'>Formulario para eventos</a></p>
 </body>
 
 </html>

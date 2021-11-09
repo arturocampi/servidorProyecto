@@ -55,7 +55,7 @@
 </head>
 
 <body>
-    <img id="logo" src="../img/logo.png">
+    <img id="logo" src="/img/logo.png">
     <h1>Bellissima</h1>
     <p><a href='?method=formularioCliente'>Formulario para clientes</a></p>
     <p><a href='?method=formularioEvento'>Formulario para eventos</a></p>
