@@ -2,8 +2,14 @@
 
 class HomeController
 {
+
+    function __construct()
+    {
+        echo "HomeController -> construct <br>";
+    }
+
     public function index()
     {
-        require "app/views/login.php";
+        require "app/views/home.php";
     }
 }
