@@ -10,7 +10,7 @@ class App
         } else {
             $url = 'home';
         }
-
+        
         $controllerName = array_shift($arguments);
         if (count($arguments)) {
             $method =  array_shift($arguments);
