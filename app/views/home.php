@@ -57,9 +57,8 @@
 <body>
     <img id="logo" src="../img/logo.png">
     <h1>Bellissima</h1>
-    <?php require '../app/views/header.php';?>
-    <p><a href='../app/views/cliente.php'>Información para clientes</a></p>
-    <p><a href='?method=login'>Acceso Gerente</a></p>
+    <p><a href='?url=cliente'>Información para clientes</a></p>
+    <!-- <p><a href='?method=index&url=cliente'>Acceso Gerente</a></p> -->
 </body>
 
 </html>
