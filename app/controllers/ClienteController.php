@@ -1,6 +1,6 @@
 <?php
 
-class Cliente
+class ClienteController
 {
 
     function __construct()

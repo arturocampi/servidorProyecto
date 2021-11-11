@@ -57,7 +57,7 @@
 <body>
     <img id="logo" src="/img/logo.png">
     <h1>Bellissima</h1>
-    <p><a href='cliente/index'>Información para clientes</a></p>
+    <p><a href="<?= PATH."/cliente"?>">Información para clientes</a></p>
     <!-- <p><a href='?method=index&url=cliente'>Acceso Gerente</a></p> -->
 </body>
 
