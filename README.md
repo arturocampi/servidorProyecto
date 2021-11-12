@@ -1,10 +1,10 @@
-#Proyecto servidor basado en PHP, basado en un negocio de peluquería
+# Proyecto servidor basado en PHP, basado en un negocio de peluquería
 
-##Autores del proyecto
--Arturo
--Mihail
+## Autores del proyecto
+- Arturo
+- Mihail
 
-###Como subir los archivos de tu rama local a la remota master y ejercutar merge
+### Como subir los archivos de tu rama local a la remota master y ejercutar merge
 1.**Nos situamos en nuestra rama local 'TU_NOMBRE'**
 2.*git merge master TU_RAMA_LOCAL*
 3.**Arreglamos los posibles conflictos ocurridos por el merge**
