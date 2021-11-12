@@ -62,7 +62,7 @@
 </head>
 
 <body>
-    <img id="logo" src="/img/logo.png">
+    <img id="logo" src="/img/lo">
     <h1>Bellissima</h1>
     <p><a href='<?= PATH . "/cliente" ?>'>Información para clientes</a></p>
     <p><a href='<?= PATH . "/admin" ?>'>Acceso Gerente</a></p>
