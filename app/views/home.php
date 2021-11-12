@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <style>
-         /* @font-face {
+        /* @font-face {
             font-family: 'GlutenBold';
             src: url('/css/fonts/static/Gluten-Bold.ttf');
         }
@@ -46,10 +46,6 @@
         h1 {
             margin: 0px;
             font-family: 'Caveat', cursive;
-            /* font-family: 'Shadows Into Light', cursive; */
-            /* font-family: 'Dancing Script', cursive; */
-            /* font-family: 'Kaushan Script', cursive; */
-            /* font-family: 'Gloria Hallelujah', cursive; */
             font-size: 125px;
         }
 
