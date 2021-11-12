@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+        /* @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Gluten:wght@100&display=swap');
 
         html {
@@ -48,12 +48,12 @@
         .titulo {
             font-size: 33px;
             font-weight: bold;
-        }
+        } */
     </style>
 </head>
 
 <body>
-    <form action="?method=printCliente" method="post">
+    <form action="cliente/addParticular" method="post">
         <br><br><br>
         <label class="titulo">Datos del cliente</label><br><br>
         <label>Nombre completo</label><br>

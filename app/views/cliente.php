@@ -55,8 +55,8 @@
 </head>
 
 <body>
-    <p><a href='?method=formularioCliente'>Formulario para clientes</a></p>
-    <p><a href='?method=formularioEvento'>Formulario para eventos</a></p>
+    <p><a href='cliente/particular'>Formulario para clientes</a></p>
+    <p><a href='cliente/evento'>Formulario para eventos</a></p>
 </body>
 
 </html>

@@ -7,11 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+         /* @font-face {
+            font-family: 'GlutenBold';
+            src: url('/css/fonts/static/Gluten-Bold.ttf');
+        }
+
+        @font-face {
+            font-family: 'Gluten';
+            src: url('/css/fonts/Gluten.ttf');
+        }
+
+        @font-face {
+            font-family: 'Caveat';
+            src: url('../../fonts/CaveatBrush-Regular.ttf');
+        }
+
+
 
         html {
             background-color: #efa693;
@@ -50,15 +61,15 @@
         p {
             padding-top: 25px;
             font-size: x-large;
-        }
+        } */
     </style>
 </head>
 
 <body>
     <img id="logo" src="/img/logo.png">
     <h1>Bellissima</h1>
-    <p><a href="<?= PATH."/cliente"?>">Información para clientes</a></p>
-    <!-- <p><a href='?method=index&url=cliente'>Acceso Gerente</a></p> -->
+    <p><a href='<?= PATH . "/cliente" ?>'>Información para clientes</a></p>
+    <p><a href='<?= PATH . "/admin" ?>'>Acceso Gerente</a></p>
 </body>
 
 </html>
