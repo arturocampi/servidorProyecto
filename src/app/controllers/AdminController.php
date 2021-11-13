@@ -43,6 +43,6 @@ class AdminController
     public function logout()
     {
         session_destroy();
-        header('Location:/home');
+        header("Location:/home");
     }
 }
