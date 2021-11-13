@@ -5,7 +5,7 @@
 * Arturo
 * Mihail
 
-### Pasos para fundir tu rama local con la rama master
+### Pasos para fundir la rama local con la rama master
 
 1. **Primero ejecutamos merge entre la rama remota master y nuestra rama local propia**
 2. *git merge master TU_RAMA_LOCAL*
