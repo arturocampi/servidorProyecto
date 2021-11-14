@@ -1,17 +1,15 @@
-#  Proyecto sevidor basado en php y mysql
+# Proyecto servidor basado en PHP, basado en un negocio de peluquería
 
-## Autores
+## Autores del proyecto
+- Arturo
+- Mihail
 
-* Arturo
-* Mihail
-
-### Pasos para fundir la rama local con la rama master
-
-1. **Primero ejecutamos merge entre la rama remota master y nuestra rama local propia**
+### Como subir los archivos de tu rama local a la remota master y ejercutar merge
+1. **Nos situamos en nuestra rama local 'TU_NOMBRE'**
 2. *git merge master TU_RAMA_LOCAL*
-3. **En caso de tener conflictos de código los solucionamos y realizamos un push**
+3. **Arreglamos los posibles conflictos ocurridos por el merge**
 4. *git push*
-5. **Cambiamos de rama a nuestra rama master LOCAL**
-6. *git checkout master*
-7. **Y de nuevo, ejecutamos git merge con las ramas al contrario**
-8. *git merge TU_RAMA_LOCAL master*
+5. **Cambiamos de rama a nuestra 'MASTER_LOCAL'**
+6. *git merge TU_RAMA_LOCAL master*
+7. **Arreglamos los posibles conflictos ocurridos por el merge**
+8. *git push*
