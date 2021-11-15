@@ -359,3 +359,17 @@ Xdebug: [Config] The setting 'xdebug.remote_enable' has been renamed, see the up
 [Sun Nov 14 19:05:29.273317 2021] [php:notice] [pid 18] [client 172.23.0.1:60754] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: 192.168.1.134:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/cliente
 [Sun Nov 14 19:05:30.152108 2021] [php:notice] [pid 18] [client 172.23.0.1:60754] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: 192.168.1.134:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/home
 [Sun Nov 14 19:05:37.712139 2021] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.23.0.3. Set the 'ServerName' directive globally to suppress this message
+Cannot load Xdebug - it was already loaded
+Xdebug: [Config] The setting 'xdebug.remote_autostart' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_autostart (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+Xdebug: [Config] The setting 'xdebug.remote_enable' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_enable (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+[Mon Nov 15 00:37:20.763243 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.0.10 configured -- resuming normal operations
+[Mon Nov 15 00:37:20.763558 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Nov 15 00:37:29.674409 2021] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.23.0.5. Set the 'ServerName' directive globally to suppress this message
+Cannot load Xdebug - it was already loaded
+Xdebug: [Config] The setting 'xdebug.remote_autostart' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_autostart (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+Xdebug: [Config] The setting 'xdebug.remote_enable' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_enable (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+[Mon Nov 15 00:45:34.056133 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.0.10 configured -- resuming normal operations
+[Mon Nov 15 00:45:34.056927 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Nov 15 00:45:45.013516 2021] [php:notice] [pid 18] [client 172.23.0.1:51590] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: 192.168.1.134:9003 (through xdebug.client_host/xdebug.client_port) :-(

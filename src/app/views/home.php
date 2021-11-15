@@ -50,7 +50,6 @@
         <h1>Bellissima</h1>
         <p><a href='/cliente'>Información para clientes</a></p>
         <p><a href='/admin'>Acceso Gerente</a></p>
-        <p><a href='/info'">XDEBUG</a></p>
     </center>
 </body>
 

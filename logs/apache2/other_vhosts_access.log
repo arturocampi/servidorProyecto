@@ -259,3 +259,4 @@ localhost:80 172.23.0.1 - - [14/Nov/2021:19:05:25 +0000] "GET / HTTP/1.1" 200 95
 localhost:80 172.23.0.1 - - [14/Nov/2021:19:05:27 +0000] "GET /cliente HTTP/1.1" 200 992 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36"
 localhost:80 172.23.0.1 - - [14/Nov/2021:19:05:29 +0000] "GET /home HTTP/1.1" 200 955 "http://localhost/cliente" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36"
 localhost:80 172.23.0.1 - - [14/Nov/2021:19:05:29 +0000] "GET /info HTTP/1.1" 200 3731 "http://localhost/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36"
+localhost:80 172.23.0.1 - - [15/Nov/2021:00:45:44 +0000] "GET / HTTP/1.1" 200 963 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36"
