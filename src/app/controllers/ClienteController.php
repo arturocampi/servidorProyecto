@@ -8,6 +8,10 @@ class ClienteController
         require 'app/views/cliente.php';
     }
 
+    public function cursos(){
+        require 'app/views/cursos.php';
+    }
+
     public function particular()
     {
         require 'app/views/forms/cliente.php';

@@ -7,11 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Gluten:wght@200&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
 
         body {
             padding: 0px;
@@ -36,14 +34,14 @@
             font-size: 125px;
         }
 
-        #logo {
-            width: 300px;
-            margin-top: 35px;
-        }
-
         p {
             padding-top: 25px;
             font-size: x-large;
+        }
+
+        #logo {
+            width: 300px;
+            margin-top: 35px;
         }
     </style>
 </head>
@@ -52,6 +50,7 @@
     <img id="logo" src="https://i.ibb.co/yPb0pXG/logo.png" alt="logo" border="0">
     <p><a href='cliente/particular'>Formulario para clientes</a></p>
     <p><a href='cliente/evento'>Formulario para eventos</a></p>
+    <p><a href='cliente/cursos'>¿Quieres aprender con nosotros?</a></p>
     <p><a href='/home'>Inicio</a></p>
 </body>
 

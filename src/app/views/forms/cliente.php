@@ -70,7 +70,33 @@
                 <option value="hombre">Hombre</option>
             </select><br><br>
             <label>Que tipo de peinado quieres</label><br><br>
-            <input type="text" name="peinado"><br><br>
+            <select name="peinado"><br><br>
+                <option value="corte_pelo_corto" selected>Corte en pelo corto (6€)</option>
+                <option value="corte_media_melena">Corte en media melena (8€)</option>
+                <option value="corte_pelo_largo">Corte en pelo largo (10€)</option>
+                <option value="tinte_pelo_corto">Tinte en pelo corto y medio (15€)</option>
+                <option value="tinte_pelo_largo">Tinte en pelo largo (18€)</option>
+                <option value="tinte_descoloracion_pelo_corto">Tinte + decoloración en pelo corto y medio (20€)</option>
+                <option value="tinte_descoloracion_pelo_largo">Tinte + decoloración en pelo largo (23€)</option>
+                <option value="reflejos_pelo_corto_medio">Reflejos pelo corto y medio (15€)</option>
+                <option value="reflejos_pelo_largo">Reflejos pelo largo (18€)</option>
+                <option value="mechas_pelo_corto_medio">Mechas pelo corto y medio (plata, gorro o peine) (20€)</option>
+                <option value="mechas_pelo_corto_largo">Mechas pelo largo (plata, gorro o peine) (23€)</option>
+                <option value="tinte_mechas_pelo_corto_medio">Tinte + mechas pelo corto y medio (30€)</option>
+                <option value="tinte_mechas_pelo_largo">Tinte + mechas pelo largo (33€)</option>
+                <option value="permanente_pelo_corto">Permanente rizada o lisa en pelo corto y medio (20€)</option>
+                <option value="permanente_pelo_largo">Permanente rizada o lisa en pelo largo (23€)</option>
+                <option value="balayage_pelo_corto">Balayage en pelo corto y medio (25€)</option>
+                <option value="balayage_pelo_largo">Balayage en pelo largo (30€)</option>
+                <option value="lavado">Lavado (5€)</option>
+                <option value="peinado_final">Peinado final (5€)</option>
+                <option value="hidratacion_pelo_corto">Hidratación/Reestructuración pelo corto y medio (10€)</option>
+                <option value="hidratacion_pelo_largo">Hidratación/Reestructuración en pelo largo (13€)</option>
+                <option value="semirecogido_pelo_corto">Semi-recogido en pelo corto o medio (DESDE 10€)</option>
+                <option value="semirecogido_pelo_largo">Semi-recogido en pelo largo (DESDE 13€)</option>
+                <option value="recodigo_pelo_corto">Recogido en pelo corto y medio (DESDE 13€)</option>
+                <option value="recogido_pelo_largo">Recogido en pelo largo (DESDE 18€)</option>
+            </select><br><br>
             <input type="submit" value="enviar">
             <input type="reset" value="borrar"><br><br>
             <p><a href='/home'>Inicio</a></p>
