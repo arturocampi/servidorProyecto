@@ -373,3 +373,6 @@ Xdebug: [Config] The setting 'xdebug.remote_enable' has been renamed, see the up
 [Mon Nov 15 00:45:34.056133 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.0.10 configured -- resuming normal operations
 [Mon Nov 15 00:45:34.056927 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
 [Mon Nov 15 00:45:45.013516 2021] [php:notice] [pid 18] [client 172.23.0.1:51590] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: 192.168.1.134:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 00:46:28.259239 2021] [php:notice] [pid 20] [client 172.23.0.1:51602] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: 192.168.1.134:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/
+[Mon Nov 15 00:46:29.193051 2021] [php:notice] [pid 20] [client 172.23.0.1:51602] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: 192.168.1.134:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/
+[Mon Nov 15 00:46:29.941730 2021] [php:notice] [pid 20] [client 172.23.0.1:51602] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: 192.168.1.134:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/cliente
