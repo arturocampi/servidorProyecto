@@ -429,3 +429,188 @@ Xdebug: [Config] The setting 'xdebug.remote_enable' has been renamed, see the up
 [Mon Nov 15 11:10:58.809264 2021] [php:notice] [pid 18] [client 172.23.0.1:49720] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: 192.168.1.134:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/cliente
 [Mon Nov 15 12:06:02.809526 2021] [php:notice] [pid 19] [client 172.23.0.1:49894] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: 192.168.1.134:9003 (through xdebug.client_host/xdebug.client_port) :-(
 [Mon Nov 15 12:33:03.173786 2021] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.2. Set the 'ServerName' directive globally to suppress this message
+Cannot load Xdebug - it was already loaded
+Xdebug: [Config] The setting 'xdebug.remote_autostart' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_autostart (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+Xdebug: [Config] The setting 'xdebug.remote_enable' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_enable (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+[Mon Nov 15 14:28:04.363286 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.0.10 configured -- resuming normal operations
+[Mon Nov 15 14:28:04.365400 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Nov 15 14:28:12.755939 2021] [php:notice] [pid 17] [client 172.18.0.1:33582] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: 192.168.1.134:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:29:01.606492 2021] [php:notice] [pid 18] [client 172.18.0.1:33642] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: 192.168.1.134:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:29:32.496614 2021] [php:notice] [pid 16] [client 172.18.0.1:33656] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: 192.168.1.134:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:29:34.685320 2021] [php:notice] [pid 16] [client 172.18.0.1:33656] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: 192.168.1.134:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/
+[Mon Nov 15 14:29:36.847817 2021] [php:notice] [pid 16] [client 172.18.0.1:33656] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: 192.168.1.134:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/cliente
+[Mon Nov 15 14:29:55.536588 2021] [php:notice] [pid 20] [client 172.18.0.1:33674] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: 192.168.1.134:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/home
+[Mon Nov 15 14:29:57.998738 2021] [php:notice] [pid 20] [client 172.18.0.1:33674] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: 192.168.1.134:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/cliente
+[Mon Nov 15 14:31:29.521051 2021] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.5. Set the 'ServerName' directive globally to suppress this message
+Cannot load Xdebug - it was already loaded
+Xdebug: [Config] The setting 'xdebug.remote_autostart' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_autostart (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+Xdebug: [Config] The setting 'xdebug.remote_enable' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_enable (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+[Mon Nov 15 14:31:33.673299 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.0.10 configured -- resuming normal operations
+[Mon Nov 15 14:31:33.673349 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Nov 15 14:31:44.913530 2021] [php:notice] [pid 16] [client 172.18.0.1:41186] Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:31:44.941794 2021] [php:notice] [pid 17] [client 172.18.0.1:41204] Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:31:55.816912 2021] [php:notice] [pid 18] [client 172.18.0.1:41226] Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:31:55.849143 2021] [php:notice] [pid 18] [client 172.18.0.1:41226] Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:32:13.896969 2021] [php:notice] [pid 19] [client 172.18.0.1:41240] Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/
+[Mon Nov 15 14:34:49.731760 2021] [php:notice] [pid 20] [client 172.18.0.1:41358] Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/
+[Mon Nov 15 14:34:49.925797 2021] [php:notice] [pid 20] [client 172.18.0.1:41358] Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:34:51.621939 2021] [php:notice] [pid 21] [client 172.18.0.1:41366] Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/cliente
+[Mon Nov 15 14:34:51.641842 2021] [php:notice] [pid 21] [client 172.18.0.1:41366] Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/cliente
+[Mon Nov 15 14:34:57.851806 2021] [php:notice] [pid 16] [client 172.18.0.1:41372] Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/
+[Mon Nov 15 14:34:59.579652 2021] [php:notice] [pid 16] [client 172.18.0.1:41372] Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/cliente
+[Mon Nov 15 14:34:59.586961 2021] [php:notice] [pid 16] [client 172.18.0.1:41372] Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/cliente
+[Mon Nov 15 14:35:09.708733 2021] [php:notice] [pid 17] [client 172.18.0.1:41384] Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/cliente
+[Mon Nov 15 14:35:11.943045 2021] [php:notice] [pid 18] [client 172.18.0.1:41388] Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/cliente
+[Mon Nov 15 14:36:27.891185 2021] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.5. Set the 'ServerName' directive globally to suppress this message
+Cannot load Xdebug - it was already loaded
+Xdebug: [Config] The setting 'xdebug.remote_autostart' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_autostart (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+Xdebug: [Config] The setting 'xdebug.remote_enable' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_enable (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+[Mon Nov 15 14:36:30.955068 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.0.10 configured -- resuming normal operations
+[Mon Nov 15 14:36:30.955115 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Nov 15 14:36:42.801350 2021] [php:notice] [pid 17] [client 172.18.0.1:41510] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.17.0.1:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/
+[Mon Nov 15 14:36:42.936093 2021] [php:notice] [pid 17] [client 172.18.0.1:41510] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.17.0.1:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:36:44.984959 2021] [php:notice] [pid 18] [client 172.18.0.1:41522] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.17.0.1:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/cliente
+[Mon Nov 15 14:36:45.007414 2021] [php:notice] [pid 18] [client 172.18.0.1:41522] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.17.0.1:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:36:49.170315 2021] [php:notice] [pid 19] [client 172.18.0.1:41538] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.17.0.1:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/
+[Mon Nov 15 14:36:49.857365 2021] [php:notice] [pid 19] [client 172.18.0.1:41538] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.17.0.1:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/
+[Mon Nov 15 14:36:50.809989 2021] [php:notice] [pid 19] [client 172.18.0.1:41538] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.17.0.1:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/cliente
+[Mon Nov 15 14:37:22.942171 2021] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.5. Set the 'ServerName' directive globally to suppress this message
+Cannot load Xdebug - it was already loaded
+Xdebug: [Config] The setting 'xdebug.remote_autostart' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_autostart (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+Xdebug: [Config] The setting 'xdebug.remote_enable' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_enable (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+[Mon Nov 15 14:37:25.706182 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.0.10 configured -- resuming normal operations
+[Mon Nov 15 14:37:25.706238 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Nov 15 14:37:29.661045 2021] [php:notice] [pid 17] [client 172.18.0.1:41568] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:37:29.734713 2021] [php:notice] [pid 17] [client 172.18.0.1:41568] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:37:37.708795 2021] [php:notice] [pid 19] [client 172.18.0.1:41594] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:37:37.801885 2021] [php:notice] [pid 19] [client 172.18.0.1:41594] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:37:38.950990 2021] [php:notice] [pid 20] [client 172.18.0.1:41608] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:37:39.460917 2021] [php:notice] [pid 20] [client 172.18.0.1:41608] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:37:39.693511 2021] [php:notice] [pid 20] [client 172.18.0.1:41608] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:37:39.884575 2021] [php:notice] [pid 20] [client 172.18.0.1:41608] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:37:40.060279 2021] [php:notice] [pid 20] [client 172.18.0.1:41608] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:37:40.259812 2021] [php:notice] [pid 20] [client 172.18.0.1:41608] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:37:48.038761 2021] [php:notice] [pid 16] [client 172.18.0.1:41630] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:37:48.255246 2021] [php:notice] [pid 16] [client 172.18.0.1:41630] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:37:49.372117 2021] [php:notice] [pid 16] [client 172.18.0.1:41630] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:38:14.776207 2021] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.5. Set the 'ServerName' directive globally to suppress this message
+Cannot load Xdebug - it was already loaded
+Xdebug: [Config] The setting 'xdebug.remote_autostart' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_autostart (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+Xdebug: [Config] The setting 'xdebug.remote_enable' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_enable (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+[Mon Nov 15 14:38:18.336329 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.0.10 configured -- resuming normal operations
+[Mon Nov 15 14:38:18.336383 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Nov 15 14:38:21.534284 2021] [php:notice] [pid 16] [client 172.18.0.1:41676] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:38:22.008816 2021] [php:notice] [pid 16] [client 172.18.0.1:41676] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:38:22.192026 2021] [php:notice] [pid 16] [client 172.18.0.1:41676] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:38:22.363300 2021] [php:notice] [pid 16] [client 172.18.0.1:41676] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:38:22.519852 2021] [php:notice] [pid 16] [client 172.18.0.1:41676] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:38:25.960184 2021] [php:notice] [pid 16] [client 172.18.0.1:41676] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:38:28.023975 2021] [php:notice] [pid 16] [client 172.18.0.1:41676] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/cliente
+[Mon Nov 15 14:41:40.184343 2021] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.5. Set the 'ServerName' directive globally to suppress this message
+Cannot load Xdebug - it was already loaded
+Xdebug: [Config] The setting 'xdebug.remote_autostart' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_autostart (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+Xdebug: [Config] The setting 'xdebug.remote_enable' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_enable (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+[Mon Nov 15 14:41:43.190245 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.0.10 configured -- resuming normal operations
+[Mon Nov 15 14:41:43.190318 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Nov 15 14:42:18.743079 2021] [php:notice] [pid 17] [client 172.18.0.1:41822] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 127.0.0.1:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:42:19.367138 2021] [php:notice] [pid 17] [client 172.18.0.1:41822] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 127.0.0.1:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:42:21.214859 2021] [php:notice] [pid 17] [client 172.18.0.1:41822] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 127.0.0.1:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/cliente
+[Mon Nov 15 14:42:28.499758 2021] [php:notice] [pid 18] [client 172.18.0.1:41836] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 127.0.0.1:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:42:29.997559 2021] [php:notice] [pid 18] [client 172.18.0.1:41836] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 127.0.0.1:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/cliente
+[Mon Nov 15 14:47:02.869232 2021] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.5. Set the 'ServerName' directive globally to suppress this message
+Cannot load Xdebug - it was already loaded
+Xdebug: [Config] The setting 'xdebug.remote_autostart' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_autostart (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+Xdebug: [Config] The setting 'xdebug.remote_connect_back' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_connect_back (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+Xdebug: [Config] The setting 'xdebug.remote_enable' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_enable (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+[Mon Nov 15 14:47:06.025121 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.0.10 configured -- resuming normal operations
+[Mon Nov 15 14:47:06.025169 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Nov 15 14:47:25.159884 2021] [php:notice] [pid 17] [client 172.18.0.1:42036] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:47:27.178854 2021] [php:notice] [pid 17] [client 172.18.0.1:42036] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/
+[Mon Nov 15 14:47:28.709358 2021] [php:notice] [pid 17] [client 172.18.0.1:42036] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/cliente
+[Mon Nov 15 14:48:51.121660 2021] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.5. Set the 'ServerName' directive globally to suppress this message
+Cannot load Xdebug - it was already loaded
+Xdebug: [Config] The setting 'xdebug.remote_autostart' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_autostart (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+Xdebug: [Config] The setting 'xdebug.remote_connect_back' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_connect_back (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+Xdebug: [Config] The setting 'xdebug.remote_enable' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_enable (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+[Mon Nov 15 14:48:54.807310 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.0.10 configured -- resuming normal operations
+[Mon Nov 15 14:48:54.807361 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Nov 15 14:49:15.965430 2021] [php:notice] [pid 16] [client 172.18.0.1:42116] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9000 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/
+[Mon Nov 15 14:49:16.780681 2021] [php:notice] [pid 16] [client 172.18.0.1:42116] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9000 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/cliente
+[Mon Nov 15 14:51:35.508810 2021] [php:notice] [pid 17] [client 172.18.0.1:42154] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9000 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/
+[Mon Nov 15 14:51:53.776761 2021] [php:notice] [pid 18] [client 172.18.0.1:42166] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9000 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/
+[Mon Nov 15 14:53:05.929623 2021] [php:notice] [pid 20] [client 172.18.0.1:42186] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9000 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:53:07.452284 2021] [php:notice] [pid 20] [client 172.18.0.1:42186] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9000 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/
+[Mon Nov 15 14:53:08.491567 2021] [php:notice] [pid 20] [client 172.18.0.1:42186] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9000 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/cliente
+[Mon Nov 15 14:54:02.617747 2021] [php:notice] [pid 21] [client 172.18.0.1:42204] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9000 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/cliente
+[Mon Nov 15 14:54:05.811677 2021] [php:notice] [pid 21] [client 172.18.0.1:42204] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9000 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/cliente
+[Mon Nov 15 14:54:06.467395 2021] [php:notice] [pid 21] [client 172.18.0.1:42204] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9000 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/cliente
+[Mon Nov 15 14:54:06.657668 2021] [php:notice] [pid 21] [client 172.18.0.1:42204] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9000 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/cliente
+[Mon Nov 15 14:54:06.861271 2021] [php:notice] [pid 21] [client 172.18.0.1:42204] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9000 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/cliente
+[Mon Nov 15 14:54:07.032471 2021] [php:notice] [pid 21] [client 172.18.0.1:42204] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9000 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/cliente
+[Mon Nov 15 14:54:07.215731 2021] [php:notice] [pid 21] [client 172.18.0.1:42204] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9000 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/cliente
+[Mon Nov 15 14:54:39.395468 2021] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.2. Set the 'ServerName' directive globally to suppress this message
+Cannot load Xdebug - it was already loaded
+Xdebug: [Config] The setting 'xdebug.remote_autostart' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_autostart (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+Xdebug: [Config] The setting 'xdebug.remote_enable' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_enable (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+[Mon Nov 15 14:54:43.934807 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.0.10 configured -- resuming normal operations
+[Mon Nov 15 14:54:43.934874 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Nov 15 14:54:47.795506 2021] [php:notice] [pid 16] [client 172.18.0.1:34882] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/cliente
+[Mon Nov 15 14:54:55.892956 2021] [php:notice] [pid 17] [client 172.18.0.1:34904] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:54:57.787508 2021] [php:notice] [pid 17] [client 172.18.0.1:34904] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/
+[Mon Nov 15 14:54:58.728262 2021] [php:notice] [pid 17] [client 172.18.0.1:34904] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/cliente
+[Mon Nov 15 14:56:55.590726 2021] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.2. Set the 'ServerName' directive globally to suppress this message
+Cannot load Xdebug - it was already loaded
+Xdebug: [Config] The setting 'xdebug.remote_autostart' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_autostart (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+Xdebug: [Config] The setting 'xdebug.remote_connect_back' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_connect_back (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+Xdebug: [Config] The setting 'xdebug.remote_enable' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_enable (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+[Mon Nov 15 14:56:58.825386 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.0.10 configured -- resuming normal operations
+[Mon Nov 15 14:56:58.825539 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Nov 15 14:58:03.940052 2021] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.2. Set the 'ServerName' directive globally to suppress this message
+Cannot load Xdebug - it was already loaded
+Xdebug: [Config] The setting 'xdebug.remote_autostart' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_autostart (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+Xdebug: [Config] The setting 'xdebug.remote_connect_back' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_connect_back (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+Xdebug: [Config] The setting 'xdebug.remote_enable' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_enable (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+[Mon Nov 15 14:58:06.277271 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.0.10 configured -- resuming normal operations
+[Mon Nov 15 14:58:06.277341 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Nov 15 14:58:15.666277 2021] [php:notice] [pid 17] [client 172.18.0.1:35070] Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:58:15.666277 2021] [php:notice] [pid 18] [client 172.18.0.1:35062] Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:58:15.667538 2021] [php:notice] [pid 19] [client 172.18.0.1:35066] Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:58:15.668786 2021] [php:notice] [pid 16] [client 172.18.0.1:35054] Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:58:15.669543 2021] [php:notice] [pid 20] [client 172.18.0.1:35074] Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:58:21.536583 2021] [php:notice] [pid 23] [client 172.18.0.1:35106] Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/
+[Mon Nov 15 14:58:22.411640 2021] [php:notice] [pid 23] [client 172.18.0.1:35106] Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/cliente
+[Mon Nov 15 14:58:35.964930 2021] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.2. Set the 'ServerName' directive globally to suppress this message
+Cannot load Xdebug - it was already loaded
+Xdebug: [Config] The setting 'xdebug.remote_autostart' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_autostart (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+Xdebug: [Config] The setting 'xdebug.remote_connect_back' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_connect_back (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+Xdebug: [Config] The setting 'xdebug.remote_enable' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_enable (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+[Mon Nov 15 14:58:38.328951 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.0.10 configured -- resuming normal operations
+[Mon Nov 15 14:58:38.329007 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Nov 15 14:58:42.822568 2021] [php:notice] [pid 17] [client 172.18.0.1:35158] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.17.0.1:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/
+[Mon Nov 15 14:58:45.575752 2021] [php:notice] [pid 17] [client 172.18.0.1:35158] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.17.0.1:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:59:08.162086 2021] [php:notice] [pid 18] [client 172.18.0.1:53298] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.17.0.1:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:59:08.348910 2021] [php:notice] [pid 18] [client 172.18.0.1:53298] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.17.0.1:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 14:59:53.963567 2021] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.2. Set the 'ServerName' directive globally to suppress this message
+Cannot load Xdebug - it was already loaded
+Xdebug: [Config] The setting 'xdebug.remote_autostart' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_autostart (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+Xdebug: [Config] The setting 'xdebug.remote_connect_back' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_connect_back (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+Xdebug: [Config] The setting 'xdebug.remote_enable' has been renamed, see the upgrading guide at https://xdebug.org/docs/upgrade_guide#changed-xdebug.remote_enable (See: https://xdebug.org/docs/errors#CFG-C-CHANGED)
+[Mon Nov 15 14:59:57.145493 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.0.10 configured -- resuming normal operations
+[Mon Nov 15 14:59:57.145548 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Nov 15 15:00:07.302479 2021] [php:notice] [pid 19] [client 172.18.0.1:35270] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.17.0.1:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 15:00:07.755644 2021] [php:notice] [pid 19] [client 172.18.0.1:35270] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.17.0.1:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 15:00:08.232577 2021] [php:notice] [pid 19] [client 172.18.0.1:35270] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.17.0.1:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 15 15:00:49.567128 2021] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully

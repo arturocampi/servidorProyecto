@@ -5,4 +5,4 @@ $dbUsername = 'docker';
 $dbPassword = 'docker';
 $dbName = 'docker';
 
-$connection  = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dvName);
+$conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
