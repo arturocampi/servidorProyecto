@@ -19,3 +19,7 @@ Cannot load Xdebug - it was already loaded
 [Tue Nov 16 16:25:31.921120 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.0.10 configured -- resuming normal operations
 [Tue Nov 16 16:25:31.921168 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
 [Tue Nov 16 16:30:24.038499 2021] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.5. Set the 'ServerName' directive globally to suppress this message
+Cannot load Xdebug - it was already loaded
+[Tue Nov 16 19:31:38.467507 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.0.10 configured -- resuming normal operations
+[Tue Nov 16 19:31:38.467558 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'

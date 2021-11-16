@@ -1,6 +1,13 @@
 <?php
 
-class Empleado
+namespace App\Models;
+
+use PDO;
+use Core\Model;
+
+require_once '../core/Model.php';
+
+class Empleado extends Model
 {
     public $nombre;
     public $apellido;
@@ -10,29 +17,42 @@ class Empleado
     public $horario;
     public $sueldo;
 
-    public function __construct($nombre, $apellido, $telefono, $edad, $sexo, $horario, $sueldo)
+    // public function __construct($nombre, $apellido, $telefono, $edad, $sexo, $horario, $sueldo)
+    // {
+    //     nombre = $nombre;
+    //     apellido = $apellido;
+    //     telefono = $telefono;
+    //     edad = $edad;
+    //     sexo = $sexo;
+    //     horario = $horario;
+    //     sueldo = $sueldo;
+    // }
+
+    public static function all()
     {
-        $this->nombre = $nombre;
-        $this->apellido = $apellido;
-        $this->telefono = $telefono;
-        $this->edad = $edad;
-        $this->sexo = $sexo;
-        $this->horario = $horario;
-        $this->sueldo = $sueldo;
+        // Obtenemos la conexión primero
+        $db = Empleado::connect();
+        // Preparamos la consulta
+        $sql = 'SELECT * FROM empleados';
+        // Ejecutamos la orden
+        $statement  = $db->query($sql);
+        // Recogemos los datos con fetch_all
+        $empleados = $statement->fetch_all(PDO::FETCH_CLASS, User::class);
+        // Devuelbe los empleados 
+        return $empleados;
     }
 
-    public function getNombre()
+    public function insert()
     {
-        return $this->nombre;
-    }
-
-    public function setNombre($nombre)
-    {
-        $this->nombre = $nombre;
-    }
-
-    public function __toString()
-    {
-        return "Nombre: " . $this->nombre . " <br>Appelido: " . $this->apellido . "<br>Telefono: " . $this->telefono . " <br>Edad: " . $this->edad . " <br>Sexo: " . $this->sexo . " <br>Horario: " . $this->horario . "<br>Sueldo: " . $this->sueldo;
+        $db = Empleado::connect();
+        $stmt = $db->prepare('INSERT INTO empleados(nombre, apellido, telefono, edad, sexo, horario, sueldo) VALUES(:nombre, :apellido, :telefono, :edad, :sexo, :horario, :sueldo)');
+        $stmt->bindValue(':nombre', $this->nombre);
+        $stmt->bindValue(':apellido', $this->apellido);
+        $stmt->bindValue(':telefono', $this->telefono);
+        $stmt->bindValue(':edad', $this->edad);
+        $stmt->bindValue(':sexo', $this->sexo);
+        $stmt->bindValue(':horario', $this->horario);
+        $stmt->bindValue(':sueldo', $this->sueldo);
+        return $stmt->execute();
     }
 }

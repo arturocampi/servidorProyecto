@@ -1,5 +1,10 @@
 <?php
 
+namespace App\Controllers;
+
+use App\Models\Empleado;
+require_once '../app/models/Empleado.php';
+
 class AdminController
 {
 
@@ -11,9 +16,9 @@ class AdminController
     public function auth()
     {
         session_start();
-        $_SESSION['user'] = $_POST['user'];
+        $_SESSION['emp'] = $_POST['emp'];
         $_SESSION['password'] = $_POST['password'];
-        if (($_SESSION['user'] == 'gerente') && ($_SESSION['password'] == 'gerente')) {
+        if (($_SESSION['emp'] == 'gerente') && ($_SESSION['password'] == 'gerente')) {
             require 'app/views/forms/staff.php';
         } else {
             echo 'Credenciales incorrectas!';
@@ -21,22 +26,23 @@ class AdminController
     }
 
     public function create()
-    {
-        session_start();
-        require('models/Empleado.php');
-        $emp = new Empleado($_POST['nombre'], $_POST['apellido'], $_POST['telefono'], $_POST['edad'], $_POST['sexo'], $_POST['horario'], $_POST['sueldo']);
-        if (isset($_SESSION['empleados'])) {
-            array_push($_SESSION['empleados'], $emp);
-        } else {
-            $_SESSION['empleados'] = [];
-            array_push($_SESSION['empleados'], $emp);
-        }
-        header('Location:/admin/auth');
+    {      
+        $emp = new Empleado();
+        $emp->nombre = $_POST['nombre'];
+        $emp->apellido = $_POST['apellido'];
+        $emp->telefono = $_POST['telefono'];
+        $emp->edad = $_POST['edad'];
+        $emp->sexo = $_POST['sexo'];
+        $emp->horario = $_POST['horario'];
+        $emp->sueldo = $_POST['sueldo'];
+        $emp->insert();
+        header('Location:/admin');
     }
 
     public function mostrar()
     {
-        echo 'Mostrar';
+        $emp = new Empleado();
+        $emp::all();
     }
 
 
