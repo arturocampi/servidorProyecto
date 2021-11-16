@@ -9,3 +9,13 @@ Xdebug: [Config] The setting 'xdebug.remote_enable' has been renamed, see the up
 [Mon Nov 15 18:12:00.530341 2021] [php:notice] [pid 17] [client 172.21.0.1:36280] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.17.0.1:9003 (through xdebug.client_host/xdebug.client_port) :-(
 [Mon Nov 15 18:12:39.897352 2021] [php:notice] [pid 18] [client 172.21.0.1:36298] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.17.0.1:9003 (through xdebug.client_host/xdebug.client_port) :-(
 [Mon Nov 15 19:22:15.699967 2021] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.4. Set the 'ServerName' directive globally to suppress this message
+Cannot load Xdebug - it was already loaded
+[Tue Nov 16 14:31:17.049819 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.0.10 configured -- resuming normal operations
+[Tue Nov 16 14:31:17.049875 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Nov 16 14:32:21.870709 2021] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.28.0.4. Set the 'ServerName' directive globally to suppress this message
+Cannot load Xdebug - it was already loaded
+[Tue Nov 16 16:25:31.921120 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.0.10 configured -- resuming normal operations
+[Tue Nov 16 16:25:31.921168 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Nov 16 16:30:24.038499 2021] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully

@@ -15,6 +15,7 @@ class App
         $arguments = explode('/', trim($url, '/'));
         $controllerName = array_shift($arguments);
         $controllerName = ucwords($controllerName) . "Controller";
+        //Recoges el nombre del método
         if (count($arguments)) {
             $method =  array_shift($arguments);
         } else {
