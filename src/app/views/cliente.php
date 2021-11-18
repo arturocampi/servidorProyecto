@@ -48,9 +48,9 @@
 
 <body>
     <img id="logo" src="https://i.ibb.co/yPb0pXG/logo.png" alt="logo" border="0">
-    <p><a href='cliente/particular'>Formulario para clientes</a></p>
-    <p><a href='cliente/evento'>Formulario para eventos</a></p>
-    <p><a href='cliente/cursos'>¿Quieres aprender con nosotros?</a></p>
+    <p><a href='cita/particular'>Formulario para clientes</a></p>
+    <p><a href='cita/evento'>Formulario para eventos</a></p>
+    <p><a href='cita/cursos'>¿Quieres aprender con nosotros?</a></p>
     <p><a href='/home'>Inicio</a></p>
 </body>
 

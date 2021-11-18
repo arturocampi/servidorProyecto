@@ -9,24 +9,19 @@ require_once '../core/Model.php';
 
 class Empleado extends Model
 {
-    public $nombre;
-    public $apellido;
-    public $telefono;
-    public $edad;
-    public $sexo;
-    public $horario;
-    public $sueldo;
-
-    // public function __construct($nombre, $apellido, $telefono, $edad, $sexo, $horario, $sueldo)
-    // {
-    //     nombre = $nombre;
-    //     apellido = $apellido;
-    //     telefono = $telefono;
-    //     edad = $edad;
-    //     sexo = $sexo;
-    //     horario = $horario;
-    //     sueldo = $sueldo;
-    // }
+    public function insert()
+    {
+        $db = Empleado::connect();
+        $stmt = $db->prepare('INSERT INTO empleados(nombre, apellido, telefono, edad, sexo, horario, sueldo) VALUES(:nombre, :apellido, :telefono, :edad, :sexo, :horario, :sueldo)');
+        $stmt->bindValue(':nombre', $this->nombre);
+        $stmt->bindValue(':apellido', $this->apellido);
+        $stmt->bindValue(':telefono', $this->telefono);
+        $stmt->bindValue(':edad', $this->edad);
+        $stmt->bindValue(':sexo', $this->sexo);
+        $stmt->bindValue(':horario', $this->horario);
+        $stmt->bindValue(':sueldo', $this->sueldo);
+        return $stmt->execute();
+    }
 
     public static function all()
     {
@@ -49,20 +44,6 @@ class Empleado extends Model
         $stmt->setFetchMode(PDO::FETCH_CLASS, Empleados::class);
         $user = $stmt->fetch(PDO::FETCH_CLASS);
         return $user;
-    }
-
-    public function insert()
-    {
-        $db = Empleado::connect();
-        $stmt = $db->prepare('INSERT INTO empleados(nombre, apellido, telefono, edad, sexo, horario, sueldo) VALUES(:nombre, :apellido, :telefono, :edad, :sexo, :horario, :sueldo)');
-        $stmt->bindValue(':nombre', $this->nombre);
-        $stmt->bindValue(':apellido', $this->apellido);
-        $stmt->bindValue(':telefono', $this->telefono);
-        $stmt->bindValue(':edad', $this->edad);
-        $stmt->bindValue(':sexo', $this->sexo);
-        $stmt->bindValue(':horario', $this->horario);
-        $stmt->bindValue(':sueldo', $this->sueldo);
-        return $stmt->execute();
     }
 
     public function save()
