@@ -1,8 +1,10 @@
 <?php
 
+namespace Core;
+
 class App
 {
-    public function __construct()
+    function __construct()
     {
         //Recoges el nombre del controlador
         if (isset($_GET['url']) and !empty($_GET['url'])) {
@@ -10,7 +12,6 @@ class App
         } else {
             $url = 'home';
         }
-
         //Le damos el nombre completo al controlador pasado
         $arguments = explode('/', trim($url, '/'));
         $controllerName = array_shift($arguments);
@@ -21,22 +22,23 @@ class App
         } else {
             $method = "index";
         }
-
         //Instanciamos al controlador
         $file = "app/controllers/$controllerName" . ".php";
         if (file_exists($file)) {
             require_once $file;
         } else {
             header("HTTP/1.0 404 Not Found");
+            echo "No encontrado";
             die();
         }
-
         //Creamos un objeto del controlador
         //Llamamos al método pasado del controlador
+        $controllerName = '\\App\\Controllers\\' . $controllerName;
         $controllerObject = new $controllerName;
         if (method_exists($controllerName, $method)) {
             $controllerObject->$method($arguments);
         } else {
+            header("HTTP/1.0 404 Not Found");
             echo "No encontrado";
             die();
         }
