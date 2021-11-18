@@ -1,8 +1,9 @@
 <?php
 
-$dbServername = 'localhost';
-$dbUsername = 'docker';
-$dbPassword = 'docker';
-$dbName = 'docker';
+namespace Config;
 
-$conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
+const servername = 'host.docker.internal';
+const username = 'docker';
+const password = 'docker';
+const dbname = 'pelu';
+const charset = 'utf8mb4';

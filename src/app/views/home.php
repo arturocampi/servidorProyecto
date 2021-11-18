@@ -48,8 +48,8 @@
     <center>
         <img id="logo" src="https://i.ibb.co/yPb0pXG/logo.png" alt="logo" border="0">
         <h1>Bellissima</h1>
-        <p><a href='/cliente'>Información para clientes</a></p>
-        <p><a href='/admin'>Acceso Gerente</a></p>
+        <p><a href='/cita'>Información para clientes</a></p>
+        <p><a href='/empleado'>Acceso Gerente</a></p>
     </center>
 </body>
 
