@@ -1,15 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">BELLISIMA</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/home"?>Home</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/user"?>Usuarios</a>
+      </li>
+      </ul>
 
-<body>
-    <h1>nav</h1>
-</body>
-
-</html>
+    <!-- nuevo -->
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/login"?>Login</a>
+      </li>
+    </ul>
+  </div>
+</nav>

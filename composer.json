@@ -1,0 +1,19 @@
+{
+    "name": "alumno/proyecto-servidor",
+    "autoload": {
+        "psr-4": {
+            "Core\\": "src/core/",
+            "App\\Controllers\\": "src/app/controllers/",
+            "App\\Models\\": "src/app/models/"
+        }
+    },
+    "authors": [
+        {
+            "name": "arturocampi",
+            "email": "arturo.herraez.tpz@gmail.com"
+        }
+    ],
+    "require": {
+        "dompdf/dompdf": "^1.1"
+    }
+}
