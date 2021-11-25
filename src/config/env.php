@@ -1,3 +1,3 @@
 <?php
-    define ('PATH', '/proyectoServidor/');
+    define ('PATH', '');
 ?>

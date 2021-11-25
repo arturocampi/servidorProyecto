@@ -47,7 +47,7 @@
     <center>
         <h3>Formulario sobre empleado@</h3>
 
-        <form method="POST" action="admin/create">
+        <form method="POST" action="empleado/create">
 
             <!-- nombre/apellidos -->
             <br>

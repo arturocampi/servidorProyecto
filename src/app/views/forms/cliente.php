@@ -1,11 +1,11 @@
 <?php
-namespace App\Views\Forms;
+// namespace App\Views\Forms;
 
-use App\Models\Servicio;
+// use App\Models\Servicio;
 
-$servicio = new Servicio();
+// $servicio = new Servicio();
 
-$servicios = $servicio->all();
+// $servicios = $servicio->all();
 ?>
 
 <!DOCTYPE html>
@@ -66,24 +66,15 @@ $servicios = $servicio->all();
             <label class="titulo">Datos del cliente</label><br><br>
             <label>Nombre completo</label><br>
             <input type="text" name="nombre"><br><br>
-            <input type="text" name="apellidos"><br><br>
             <label>Telefono del cliente</label><br><br>
             <input type="text" name="telefono"><br><br>
             <label>Email del cliente</label><br><br>
-            <input type="text" name="email"><br><br><br>
-            <label class="titulo">Datos sobre la cita</label><br><br>
+            <input type="text" name="email"><br><br>
             <label>Fecha de la cita</label><br><br>
             <input type="date" name="fecha"><br><br>
-            <label>Sexo</label><br><br>
-            <select name="sexo"><br><br>
-                <option value="mujer" selected>Mujer</option>
-                <option value="hombre">Hombre</option>
-            </select><br><br>
             <label>Que tipo de peinado quieres</label><br><br>
             <select name="peinado"><br><br>
-                <?php foreach ($servicios as $key => $servicios) { ?>
-                    <option value="<?= $servicios->$nombre ?>" selected><?= $servicios->$nombre ?> (<?= $servicios->$precio ?>)</option>
-                <?php } ?>
+
             </select><br><br>
             <input type="submit" value="enviar">
             <input type="reset" value="borrar"><br><br>

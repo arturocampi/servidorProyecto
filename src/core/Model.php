@@ -2,8 +2,6 @@
 
 namespace Core;
 
-require_once '../config/db.php';
-
 use const Config\servername;
 use const Config\dbname;
 use const Config\charset;
