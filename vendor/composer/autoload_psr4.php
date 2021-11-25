@@ -12,5 +12,4 @@ return array(
     'Core\\' => array($baseDir . '/src/core'),
     'App\\Models\\' => array($baseDir . '/src/app/models'),
     'App\\Controllers\\' => array($baseDir . '/src/app/controllers'),
-    'Alumno\\ProyectoServidor\\' => array($baseDir . '/src'),
 );
