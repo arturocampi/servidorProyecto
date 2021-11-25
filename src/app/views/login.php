@@ -1,21 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <?php require "app/views/parts/head.php" ?>
 </head>
 
 <body>
-    <h1>Login para gerentes</h1>
-    <form method="POST" action="/admin/auth">
-        <label>Usuario</label><input type="text" value="" name="user"><br>
-        <label>Contraseña</label><input type="password" value="" name="password"><br><br>
-        <input type="submit" value="enviar"><br><br>
-    </form>
-    <p><a href='/home'>Inicio</a></p>
+
+    <?php require "app/views/parts/header.php" ?>
+
+    <main role="main" class="container">
+        <div class="starter-template">
+            <h1>Login</h1>
+            <form action="/login/login" method="post">
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Email</label>
+                    <input type="email" class="form-control" id="formGroupExampleInput" placeholder="email" name="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Password</label>
+                    <input type="password" class="form-control" id="formGroupExampleInput" name="password">
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            <p><a href='/home'>Inicio</a></p>
+        </div>
+        <div>
+            <br />
+            <p><?php echo $_SESSION['message'] ?></p>
+        </div>
+        </div>
+    </main>
+    <?php require "app/views/parts/footer.php" ?>
+
+
 </body>
+<?php require "app/views/parts/scripts.php" ?>
 
 </html>

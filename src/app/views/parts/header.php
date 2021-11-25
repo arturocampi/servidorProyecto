@@ -7,17 +7,21 @@
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="/home"?>Home</a>
+      <a class="nav-link" href="<?php echo isset($_SESSION['user']) ? "/home":"" ?>">
+        <?php echo isset($_SESSION['user']) ? "Home":""?></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="/user"?>Usuarios</a>
+      <a class="nav-link" href="<?php echo isset($_SESSION['user']) ? "/user":"" ?>">
+        <?php echo isset($_SESSION['user']) ? "Usuarios":""?></a>
       </li>
       </ul>
 
     <!-- nuevo -->
     <ul class="navbar-nav">
+      <li class="nav-item active"><a class="nav-link" href=""><?php echo isset($_SESSION['user']) ? $_SESSION['user']->name :'' ?></a></li>
       <li class="nav-item active">
-        <a class="nav-link" href="/login"?>Login</a>
+        <a class="nav-link" href="<?php echo isset($_SESSION['user']) ? "/login/logout": "/login" ?>">
+        <?php echo isset($_SESSION['user']) ? "Logout":"Login"?></a>
       </li>
     </ul>
   </div>
