@@ -7,3 +7,34 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 Cannot load Xdebug - it was already loaded
 [Thu Nov 25 22:55:34.766641 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.0.10 configured -- resuming normal operations
 [Thu Nov 25 22:55:34.767044 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.26.0.3. Set the 'ServerName' directive globally to suppress this message
+Cannot load Xdebug - it was already loaded
+[Fri Nov 26 21:48:15.266299 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.0.10 configured -- resuming normal operations
+[Fri Nov 26 21:48:15.266590 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Fri Nov 26 21:48:18.941990 2021] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.26.0.3. Set the 'ServerName' directive globally to suppress this message
+Cannot load Xdebug - it was already loaded
+[Mon Nov 29 21:15:18.455279 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.0.10 configured -- resuming normal operations
+[Mon Nov 29 21:15:18.455673 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Nov 29 21:47:16.720455 2021] [php:notice] [pid 18] [client 172.26.0.1:36078] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 29 21:47:17.274562 2021] [php:notice] [pid 18] [client 172.26.0.1:36078] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://test.local/
+[Mon Nov 29 21:47:19.929398 2021] [php:notice] [pid 19] [client 172.26.0.1:36084] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://test.local/
+[Mon Nov 29 21:47:30.734799 2021] [php:notice] [pid 20] [client 172.26.0.1:36088] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 29 21:47:31.650576 2021] [php:notice] [pid 20] [client 172.26.0.1:36088] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 29 21:47:31.987851 2021] [php:notice] [pid 20] [client 172.26.0.1:36088] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 29 21:47:32.180000 2021] [php:notice] [pid 21] [client 172.26.0.1:36096] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 29 21:47:32.362288 2021] [php:notice] [pid 22] [client 172.26.0.1:36100] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 29 21:47:32.557481 2021] [php:notice] [pid 18] [client 172.26.0.1:36104] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 29 21:47:32.732963 2021] [php:notice] [pid 23] [client 172.26.0.1:36108] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 29 21:47:32.938888 2021] [php:notice] [pid 19] [client 172.26.0.1:36112] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 29 21:47:47.424777 2021] [php:notice] [pid 20] [client 172.26.0.1:36116] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 29 21:47:48.184649 2021] [php:notice] [pid 20] [client 172.26.0.1:36116] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 29 21:47:48.555020 2021] [php:notice] [pid 20] [client 172.26.0.1:36116] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 29 21:47:48.828577 2021] [php:notice] [pid 20] [client 172.26.0.1:36116] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 29 21:47:49.850538 2021] [php:notice] [pid 20] [client 172.26.0.1:36116] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 29 21:47:52.782863 2021] [php:notice] [pid 20] [client 172.26.0.1:36116] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 29 21:48:17.660815 2021] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.26.0.5. Set the 'ServerName' directive globally to suppress this message
+Cannot load Xdebug - it was already loaded
+[Mon Nov 29 21:50:12.933376 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.0.10 configured -- resuming normal operations
+[Mon Nov 29 21:50:12.933707 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
