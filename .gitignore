@@ -1,6 +1,7 @@
 .env
 .vscode
 vendor
+logs
 data/mysql/ca-key.pem
 data/mysql/client-key.pem
 data/mysql/private_key.pem
