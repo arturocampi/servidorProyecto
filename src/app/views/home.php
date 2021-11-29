@@ -11,9 +11,7 @@
 
 <body>
     <?php require "app/views/parts/header.php" ?>
-    <!-- <img id="logo" src="https://i.ibb.co/yPb0pXG/logo.png" alt="logo" border="0"> -->
-    <p><a href='/cita'>Información para clientes</a></p>
-    <p><a href='/admin'>Acceso Gerente</a></p>
+    <a href='/encrypt'>Encriptar contraseñas</a>
     <?php require "app/views/parts/footer.php" ?>
 </body>
 <?php require "app/views/parts/scripts.php" ?>
