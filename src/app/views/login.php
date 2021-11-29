@@ -28,7 +28,7 @@
         </div>
         <div>
             <br />
-            <p><?php echo $_SESSION['message'] ?></p>
+            <p><?php echo isset($_SESSION['message']) ? $_SESSION['message'] : ''; ?></p>
         </div>
         </div>
     </main>

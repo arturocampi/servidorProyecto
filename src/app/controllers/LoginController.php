@@ -14,6 +14,7 @@ class LoginController
 
     public function auth()
     {
+        session_start();
         $email = $_POST['email'];
         $password = $_POST['password'];
         $user = Empleado::findbyEmail($email);
