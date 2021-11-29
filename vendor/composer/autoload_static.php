@@ -27,7 +27,6 @@ class ComposerStaticInitbdc8c358a8eed772c0f8f82f15d33e14
         array (
             'App\\Models\\' => 11,
             'App\\Controllers\\' => 16,
-            'Alumno\\ProyectoServidor\\' => 24,
         ),
     );
 
@@ -55,10 +54,6 @@ class ComposerStaticInitbdc8c358a8eed772c0f8f82f15d33e14
         'App\\Controllers\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/app/controllers',
-        ),
-        'Alumno\\ProyectoServidor\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 

@@ -1,9 +1,8 @@
 .env
 .vscode
+vendor
 data/mysql/ca-key.pem
 data/mysql/client-key.pem
 data/mysql/private_key.pem
 data/mysql/public_key.pem
 data/mysql/server-key.pem
-
-/vendor/
