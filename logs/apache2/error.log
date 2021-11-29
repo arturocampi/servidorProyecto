@@ -269,3 +269,9 @@ Cannot load Xdebug - it was already loaded
 [Thu Nov 25 17:48:51.512946 2021] [php:notice] [pid 18] [client 172.19.0.1:33998] Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/
 [Thu Nov 25 17:49:19.562531 2021] [php:notice] [pid 19] [client 172.19.0.1:34006] Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/
 [Thu Nov 25 17:58:48.330979 2021] [php:notice] [pid 21] [client 172.19.0.1:34066] Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost/
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.5. Set the 'ServerName' directive globally to suppress this message
+Cannot load Xdebug - it was already loaded
+[Mon Nov 29 16:05:10.428101 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.0.10 configured -- resuming normal operations
+[Mon Nov 29 16:05:10.428159 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Nov 29 16:05:36.528213 2021] [php:notice] [pid 17] [client 172.18.0.1:50926] Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(
+[Mon Nov 29 16:05:36.598128 2021] [php:notice] [pid 17] [client 172.18.0.1:50926] Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port) :-(
