@@ -3,46 +3,58 @@
 namespace App\Models;
 
 use PDO;
+use DateTime;
 use Core\Model;
 
 class Empleado extends Model
 {
+    public function __construct()
+    {
+        if (isset($this->birthdate)) {
+            $this->birthdate = DateTime::createFromFormat('Y-m-d', $this->birthdate);
+        }
+    }
+
+    public static function all()
+    {
+        $db = Empleado::connect();
+        $sql = 'SELECT * FROM employee';
+        $statement  = $db->query($sql);
+        $empleados = $statement->fetchAll(PDO::FETCH_CLASS, Empleado::class);
+        return $empleados;
+    }
+
     public function insert()
     {
         $db = Empleado::connect();
-        $stmt = $db->prepare('INSERT INTO employee(id,name, surname, email, details, birthdate, password, active,admin) VALUES(:id,:name, :surname, :email, :details, :birthdate, :password, :active,:admin)');
+        $stmt = $db->prepare('INSERT INTO employee(name, surname, email, details, birthdate) VALUES(:name, :surname, :email, :details, :birthdate)');
+        $stmt->bindValue(':name', $this->name);
+        $stmt->bindValue(':surname', $this->surname);
+        $stmt->bindValue(':email', $this->email);
+        $stmt->bindValue(':details', $this->details);
+        $stmt->bindValue(':birthdate', $this->birthdate);
+        return $stmt->execute();
+    }
+
+    public function save()
+    {
+        $db = Empleado::connect();
+        $stmt = $db->prepare('UPDATE employee SET name = :name, surname = :surname, email = :email, details = :details, birthdate = :birthdate WHERE id = :id');
         $stmt->bindValue(':id', $this->id);
         $stmt->bindValue(':name', $this->name);
         $stmt->bindValue(':surname', $this->surname);
         $stmt->bindValue(':email', $this->email);
         $stmt->bindValue(':details', $this->details);
         $stmt->bindValue(':birthdate', $this->birthdate);
-        $stmt->bindValue(':password', $this->password);
-        $stmt->bindValue(':active', 1);
-        $stmt->bindValue(':admin', 1);
         return $stmt->execute();
     }
 
-    public static function all()
-    {
-        // Obtenemos la conexión primero
-        $db = Empleado::connect();
-        // Preparamos la consulta
-        $sql = 'SELECT * FROM employee';
-        // Ejecutamos la orden
-        $statement  = $db->query($sql);
-        // Recogemos los datos con fetch_all
-        $empleados = $statement->fetchAll(PDO::FETCH_CLASS, Empleado::class);
-        // Devuelbe los empleados 
-        return $empleados;
-    }
-
-    public function find($id)
+    public static function find($id)
     {
         $db = Empleado::connect();
         $stmt = $db->prepare('SELECT * FROM employee WHERE id = :id');
         $stmt->execute(array(':id' => $id));
-        $stmt->setFetchMode(PDO::FETCH_CLASS, Empleados::class);
+        $stmt->setFetchMode(PDO::FETCH_CLASS, Empleado::class);
         $user = $stmt->fetch(PDO::FETCH_CLASS);
         return $user;
     }
@@ -53,8 +65,8 @@ class Empleado extends Model
         $stmt = $db->prepare('SELECT * FROM employee WHERE email=:email');
         $stmt->execute(array(':email' => $email));
         $stmt->setFetchMode(PDO::FETCH_CLASS, Empleado::class);
-        $user = $stmt->fetch(PDO::FETCH_CLASS);
-        return $user;
+        $empleado = $stmt->fetch(PDO::FETCH_CLASS);
+        return $empleado;
     }
 
     public function setPassword($password)
@@ -68,25 +80,9 @@ class Empleado extends Model
         return $password;
     }
 
-    public function passwordVerify($password, $user)
+    public static function passwordVerify($password, $empleado)
     {
-        return password_verify($password, $user->$password);
-    }
-
-    public function save()
-    {
-        $db = Empleado::connect();
-        $stmt = $db->prepare('UPDATE employee SET id =:id, name = :name, surname = :surname, email = :email, details = :details, birthdate = :birthdate, password = :password, active = :active,admin = :admin) VALUES(id =:id, name = :name, surname = :surname, email = :email, details = :details, birthdate = :birthdate, password = :password, active = :active,admin = :admin)');
-        $stmt->bindValue(':id', $this->id);
-        $stmt->bindValue(':name', $this->name);
-        $stmt->bindValue(':surname', $this->surname);
-        $stmt->bindValue(':email', $this->email);
-        $stmt->bindValue(':details', $this->details);
-        $stmt->bindValue(':birthdate', $this->birthdate);
-        $stmt->bindValue(':password', $this->password);
-        $stmt->bindValue(':active', 1);
-        $stmt->bindValue(':admin', 1);
-        return $stmt->execute();
+        return password_verify($password, $empleado->$password);
     }
 
     public function delete()

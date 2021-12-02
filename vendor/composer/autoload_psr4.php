@@ -9,7 +9,7 @@ return array(
     'Svg\\' => array($vendorDir . '/phenx/php-svg-lib/src/Svg'),
     'FontLib\\' => array($vendorDir . '/phenx/php-font-lib/src/FontLib'),
     'Dompdf\\' => array($vendorDir . '/dompdf/dompdf/src'),
-    'Core\\' => array($baseDir . '/src/core'),
-    'App\\Models\\' => array($baseDir . '/src/app/models'),
-    'App\\Controllers\\' => array($baseDir . '/src/app/controllers'),
+    'Core\\' => array($baseDir . '/html/core'),
+    'App\\Models\\' => array($baseDir . '/html/app/models'),
+    'App\\Controllers\\' => array($baseDir . '/html/app/controllers'),
 );

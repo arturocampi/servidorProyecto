@@ -1,0 +1,12 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Core\\": "html/core",
+            "App\\Controllers\\": "html/app/controllers",
+            "App\\Models\\": "html/app/models"
+        }
+    },
+    "require": {
+        "dompdf/dompdf": "^1.1"
+    }
+}

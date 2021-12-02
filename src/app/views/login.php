@@ -12,7 +12,7 @@
     <main role="main" class="container">
         <div class="starter-template">
             <h1>Login</h1>
-            <form action="/login/login" method="post">
+            <form action="/login/auth" method="post">
                 <div class="form-group">
                     <label for="formGroupExampleInput">Email</label>
                     <input type="email" class="form-control" id="formGroupExampleInput" placeholder="email" name="email">

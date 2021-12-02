@@ -14,16 +14,15 @@ class LoginController
 
     public function auth()
     {
-        session_start();
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $user = Empleado::findbyEmail($email);
-        if ($user == false) {
+        $empleado = Empleado::findbyEmail($email);
+        if ($empleado == false) {
             $_SESSION['message'] = 'Error el usuario no existe.';
             header('Location:/login');
         } else {
-            if (Empleado::passwordVerify($password, $user)) {
-                $_SESSION['user'] = $user;
+            if (Empleado::passwordVerify($password, $empleado)) {
+                $_SESSION['user'] = $empleado;
                 header('Location:/home');
             } else {
                 $_SESSION['message'] = 'Error, la contraseña es incorrecta.';
@@ -32,7 +31,8 @@ class LoginController
         }
     }
 
-    public function logout(){
+    public function logout()
+    {
         session_destroy();
         require 'app/views/login.php';
     }

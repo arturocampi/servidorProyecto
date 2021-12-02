@@ -1,31 +1,31 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => 'dev-master',
-        'version' => 'dev-master',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '6e5ce96812964ae6fcacdf0264cc6e43004c808b',
-        'name' => 'alumno/proyecto-servidor',
+        'reference' => NULL,
+        'name' => '__root__',
         'dev' => true,
     ),
     'versions' => array(
-        'alumno/proyecto-servidor' => array(
-            'pretty_version' => 'dev-master',
-            'version' => 'dev-master',
+        '__root__' => array(
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '6e5ce96812964ae6fcacdf0264cc6e43004c808b',
+            'reference' => NULL,
             'dev_requirement' => false,
         ),
         'dompdf/dompdf' => array(
-            'pretty_version' => 'v1.1.0',
-            'version' => '1.1.0.0',
+            'pretty_version' => 'v1.1.1',
+            'version' => '1.1.1.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../dompdf/dompdf',
             'aliases' => array(),
-            'reference' => 'aa594c1cdbcdab04977fdd0fff669a017fb50ef4',
+            'reference' => 'de4aad040737a89fae2129cdeb0f79c45513128d',
             'dev_requirement' => false,
         ),
         'phenx/php-font-lib' => array(
