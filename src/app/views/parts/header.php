@@ -13,22 +13,20 @@
         <a class="nav-link" href="/cita">Citas Clientes</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="/services/showCliente">Nuestro Servicios</a>
+        <a class="nav-link" href="<?= isset($_SESSION['empleado']) ? "/services/show" : "/services/showCliente" ?>">
+          Nuestro Servicios</a>
       </li>
     </ul>
 
 
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href=""><?php echo isset($_SESSION['user']) ? $_SESSION['user']->name : '' ?></a>
-    </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="<?php echo isset($_SESSION['user']) ? "/employee" : "" ?>">
-          <?php echo isset($_SESSION['user']) ? "Empleados" : "" ?></a>
+        <a class="nav-link" href="<?= isset($_SESSION['empleado']) ? "/employee/show" : "" ?>">
+          <?= isset($_SESSION['empleado']) ? "Empleados" : "" ?></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="<?php echo isset($_SESSION['user']) ? "/login/logout" : "/login" ?>">
-          <?php echo isset($_SESSION['user']) ? "Logout" : "Login" ?></a>
+        <a class="nav-link" href="<?= isset($_SESSION['empleado']) ? "/login/logout" : "/login" ?>">
+          <?= isset($_SESSION['empleado']) ? "Logout" : "Login" ?></a>
       </li>
     </ul>
   </div>

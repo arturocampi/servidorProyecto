@@ -30,7 +30,11 @@
                 </div>
                 <div class="form-group">
                     <label>Fecha de nacimiento</label>
-                    <input type="text" name="birthdate" class="form-control" value="<?php echo $empleado->birthdate ?>">
+                    <input type="text" name="birthdate" class="form-control" value="<?php echo $empleado->birthdate->format('Y-m-d') ?>">
+                </div>
+                <div class="form-group">
+                    <label>Contraseña</label>
+                    <input type="password" name="password" class="form-control">
                 </div>
                 <button type="submit" class="btn btn-default">Enviar</button>
             </form>
