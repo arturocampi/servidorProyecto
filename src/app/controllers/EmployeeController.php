@@ -39,7 +39,7 @@ class EmployeeController
         $emp->email = $_REQUEST['email'];
         $emp->details = $_REQUEST['details'];
         $emp->birthdate = $_REQUEST['birthdate'];
-        $emp->setPassword('secret');
+        $emp->password = $emp->encryptPassword($_REQUEST['password']);
         $emp->insert();
         header('Location:/employee/show');
     }
@@ -53,8 +53,9 @@ class EmployeeController
         $emp->email = $_REQUEST['email'];
         $emp->details = $_REQUEST['details'];
         $emp->birthdate = $_REQUEST['birthdate'];
+        $emp->password = $emp->encryptPassword($_REQUEST['password']);
         $emp->save();
-        header('Location:/admin');
+        header('Location:/employee/show');
     }
 
     public function delete($arguments)

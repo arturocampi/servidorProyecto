@@ -21,7 +21,7 @@
                     <th>Detalles</th>
                     <th>Precio</th>
                     <th>Tiempo</th>
-                    <th></th>
+                    <th>Opciones</th>
                 </tr>
 
                 <?php foreach ($servicios as $key => $servicio) { ?>

@@ -22,7 +22,7 @@ class LoginController
             header('Location:/login');
         } else {
             if (Empleado::passwordVerify($password, $empleado)) {
-                $_SESSION['user'] = $empleado;
+                $_SESSION['empleado'] = $empleado;
                 header('Location:/home');
             } else {
                 $_SESSION['message'] = 'Error, la contraseña es incorrecta.';

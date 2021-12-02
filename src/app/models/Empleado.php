@@ -80,9 +80,15 @@ class Empleado extends Model
         return $password;
     }
 
-    public static function passwordVerify($password, $empleado)
+    public function encryptPassword($pass)
     {
-        return password_verify($password, $empleado->$password);
+        $password = password_hash($pass, PASSWORD_BCRYPT);
+        return $password;
+    }
+
+    public static function passwordVerify($pass, $empleado)
+    {
+        return password_verify($pass, $empleado->password);
     }
 
     public function delete()

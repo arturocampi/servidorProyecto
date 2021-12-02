@@ -11,7 +11,7 @@ class PasswordController
     {
         $empleados = Empleado::all();
         foreach ($empleados as $empleado) {
-            echo $empleado->name . ':' . $empleado->setPassword('1234') . '<br>';
+            echo $empleado->name . ':' . $empleado->setPassword('secret') . '<br>';
         }
     }
 }
