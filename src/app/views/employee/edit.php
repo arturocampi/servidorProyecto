@@ -37,17 +37,17 @@
                     <?php
                     foreach ($servicios as $key => $service) {
                         if ($empleado->id == $service->id) {
-                            $selected = $empleado->id == $service->id ? 'checked' : '';?> 
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            $selected = $empleado->id == $service->id ? 'checked' : ''; ?>
+                            <input class="form-check-input" name="service[]" type="checkbox" value="<?php echo $service->name ?>" id="flexCheckDefault">
                             <label class="form-check-label" for="flexCheckDefault"><?php echo $service->name ?></label><br>
-                            <?php
-                        }else{
-                            ?>
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" <?= $selected ?>>
+                        <?php
+                        } else {
+                        ?>
+                            <input class="form-check-input" name="service[]" type="checkbox" value="<?php echo $service->name ?>" id="flexCheckChecked" <?= $selected ?>>
                             <label class="form-check-label" for="flexCheckChecked"><?php echo $service->name ?></label><br>
-                            <?php
+                    <?php
                         }
-                    }?>
+                    } ?>
                 </div><br>
                 <div class="form-group">
                     <label>Contraseña</label>

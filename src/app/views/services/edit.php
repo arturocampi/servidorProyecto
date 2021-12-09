@@ -6,16 +6,12 @@
 </head>
 
 <body>
-
     <?php require "app/views/parts/header.php" ?>
-
     <main role="main" class="container">
         <div class="starter-template">
-
             <h1>Edición de servicio</h1>
-
-            <form method="post" action="/services/save">
-
+            <form method="post" action="/services/update">
+                <input type="hidden" name="id" value="<?php echo $servicio->id ?>">
                 <div class="form-group">
                     <label>Nombre</label>
                     <input type="text" name="name" class="form-control" value="<?php echo $servicio->name ?>">
@@ -23,13 +19,8 @@
                 <div class="form-group">
                     <label for="genero">Genero</label>
                     <select class="custom-select" name="gender">
-                        <?php foreach ($servicios as $key => $servicio) { ?>
-                            <?php $female = $servicio->gender == 'mujer' ? 'select' : ''; ?>
-                            <?php $male = $servicio->gender == 'hombre' ? 'select' : ''; ?>
-                            <option value="<?= $servicio->gender ?>" <?= $female ?> <?= $male ?>><?= $servicio->gender ?></option>
-                        <?php } ?>
-                        <option value="mujer" select>mujer</option>
-                        <option value="hombre">hombre</option>
+                        <option value="mujer" <?= $servicio->gender == 'mujer' ? 'selected' : ''; ?>>mujer</option>
+                        <option value="hombre" <?= $servicio->gender == 'hombre' ? 'selected' : ''; ?>>hombre</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -47,11 +38,8 @@
                 <button type="submit" class="btn btn-default">Enviar</button>
             </form>
         </div>
-
     </main><!-- /.container -->
     <?php require "app/views/parts/footer.php" ?>
-
-
 </body>
 <?php require "app/views/parts/scripts.php" ?>
 

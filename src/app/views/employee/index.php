@@ -38,10 +38,10 @@
                             <?php } ?>
                         </td>
                         <td>
-                            <a href="<?= isset($_SESSION['user']) ? "/employee/edit/" . $empleado->id : "/employee/edit/" . $empleado->id ?>" class="btn btn-primary">
-                                <?= isset($_SESSION['user']) ? "Editar" : "Editar" ?></a>
-                            <a href="<?= isset($_SESSION['user']) ? "/employee/delete/" . $empleado->id : "/employee/delete/" . $empleado->id ?>" class="btn btn-danger">
-                                <?= isset($_SESSION['user']) ? "Borrar" : "Borrar" ?></a>
+                            <a href="<?= isset($_SESSION['empleado']) ? "/employee/edit/" . $empleado->id : "" ?> " class="btn btn-primary">
+                                <?= isset($_SESSION['empleado']) ? "Editar" : "Editar" ?></a>
+                            <a href="<?= isset($_SESSION['empleado']) ? "/employee/delete/" . $empleado->id : "" ?> " class="btn btn-danger">
+                                <?= isset($_SESSION['empleado']) ? "Borrar" : "Borrar" ?></a>
                         </td>
                     </tr>
                 <?php } ?>

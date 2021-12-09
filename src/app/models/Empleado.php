@@ -40,14 +40,32 @@ class Empleado extends Model
     public function save()
     {
         $db = Empleado::connect();
-        $stmt = $db->prepare('UPDATE employee SET name = :name, surname = :surname, email = :email, details = :details, birthdate = :birthdate WHERE id = :id');
+        $stmt = $db->prepare('UPDATE employee SET name = :name, surname = :surname, email = :email, details = :details, birthdate = :birthdate, password = :password WHERE id = :id');
         $stmt->bindValue(':id', $this->id);
         $stmt->bindValue(':name', $this->name);
         $stmt->bindValue(':surname', $this->surname);
         $stmt->bindValue(':email', $this->email);
         $stmt->bindValue(':details', $this->details);
         $stmt->bindValue(':birthdate', $this->birthdate);
+        $stmt->bindValue(':password', $this->password);
         return $stmt->execute();
+    }
+
+    public function saveService($id, $servicios)
+    {
+        $db = Empleado::connect();
+        $sql = 'SELECT * FROM service';
+        $statement  = $db->query($sql);
+        $nameServices = $statement->fetchAll(PDO::FETCH_CLASS, Servicio::class);
+        foreach ($nameServices as $nameService) {
+            $index = ($nameService->id) - 1;
+            if ($nameService->name == $servicios[$index]) {
+                $stmt = $db->prepare('UPDATE employee_service es join service s on (s.id= es.service_id) SET service_id = :service_id WHERE es.employee_id = :id');
+                $stmt->bindValue(':id', $id);
+                $stmt->bindValue(':service_id', $nameService->id);
+                return $stmt->execute();
+            }
+        }
     }
 
     public static function find($id)

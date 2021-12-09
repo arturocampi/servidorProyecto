@@ -32,10 +32,8 @@
                         <td><?php echo $servicio->price ?></td>
                         <td><?php echo $servicio->time ?></td>
                         <td>
-                            <a href="<?= isset($_SESSION['user']) ? "/services/edit/" . $servicio->id : "" ?>" class="btn btn-primary">
-                                <?php echo isset($_SESSION['user']) ? "Editar" : "Editar" ?></a>
-                            <a href="<?= isset($_SESSION['user']) ? "/services/delete/" . $servicio->id : "" ?>" class="btn btn-danger">
-                                <?php echo isset($_SESSION['user']) ? "Borrar" : "Borrar" ?></a>
+                            <a href="<?= isset($_SESSION['empleado']) ? "/services/edit/" . $servicio->id : "" ?>" class="btn btn-primary">Editar</a>
+                            <a href="<?= isset($_SESSION['empleado']) ? "/services/delete/" . $servicio->id : "" ?> " class="btn btn-danger">Borrar</a>
                         </td>
                     </tr>
                 <?php } ?>
