@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\Empleado;
+use App\Models\Servicio;
 use Dompdf\Dompdf;
 
 class EmployeeController
@@ -28,10 +29,11 @@ class EmployeeController
     {
         $id = (int) $arguments[0];
         $empleado = Empleado::find($id);
+        $servicios= Servicio::all();
         require 'app/views/employee/edit.php';
     }
 
-    public function store()
+    public function new()
     {
         $emp = new Empleado();
         $emp->name = $_REQUEST['name'];
@@ -53,6 +55,7 @@ class EmployeeController
         $emp->email = $_REQUEST['email'];
         $emp->details = $_REQUEST['details'];
         $emp->birthdate = $_REQUEST['birthdate'];
+        $emp->service = $_REQUEST['service'];
         $emp->password = $emp->setPassword($_REQUEST['password']);
         $emp->save();
         header('Location:/employee/show');

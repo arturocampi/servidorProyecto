@@ -27,12 +27,13 @@ class Empleado extends Model
     public function insert()
     {
         $db = Empleado::connect();
-        $stmt = $db->prepare('INSERT INTO employee(name, surname, email, details, birthdate) VALUES(:name, :surname, :email, :details, :birthdate)');
+        $stmt = $db->prepare('INSERT INTO employee(name, surname, email, details, birthdate, password) VALUES(:name, :surname, :email, :details, :birthdate, :password)');
         $stmt->bindValue(':name', $this->name);
         $stmt->bindValue(':surname', $this->surname);
         $stmt->bindValue(':email', $this->email);
         $stmt->bindValue(':details', $this->details);
         $stmt->bindValue(':birthdate', $this->birthdate);
+        $stmt->bindValue(':password', $this->password);
         return $stmt->execute();
     }
 
@@ -67,6 +68,30 @@ class Empleado extends Model
         $stmt->setFetchMode(PDO::FETCH_CLASS, Empleado::class);
         $empleado = $stmt->fetch(PDO::FETCH_CLASS);
         return $empleado;
+    }
+
+    public function __get($atributoDesconocido)
+    {
+        if (method_exists($this, $atributoDesconocido)) {
+            $this->$atributoDesconocido = $this->$atributoDesconocido();
+            return $this->$atributoDesconocido;
+        }
+    }
+
+    public function service()
+    {
+        $db = Empleado::connect();
+        $stmt = $db->prepare('SELECT * FROM employee_service WHERE employee_id = :employee_id');
+        $stmt->bindValue(':employee_id', $this->id);
+        $stmt->execute();
+        $stmt->setFetchMode(PDO::FETCH_CLASS, Servicio::class);
+        $employee_service = $stmt->fetch(PDO::FETCH_CLASS);
+        $stmt2 = $db->prepare('SELECT * FROM service WHERE id = :id');
+        $stmt2->bindValue(':id', $employee_service->service_id);
+        $stmt2->execute();
+        $stmt2->setFetchMode(PDO::FETCH_CLASS, Servicio::class);
+        $servicios = $stmt2->fetch(PDO::FETCH_CLASS);
+        return $servicios;
     }
 
     public function setPassword($password)

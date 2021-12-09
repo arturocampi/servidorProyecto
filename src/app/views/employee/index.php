@@ -21,6 +21,7 @@
                     <th>Email</th>
                     <th>Detalles</th>
                     <th>Fecha de Nacimiento</th>
+                    <th>Sercicios</th>
                     <th>Opciones</th>
                 </tr>
 
@@ -31,6 +32,7 @@
                         <td><?= $empleado->email ?></td>
                         <td><?= $empleado->details ?></td>
                         <td><?= $empleado->birthdate  ? $empleado->birthdate->format('Y-m-d') : 'nonato' ?></td>
+                        <td><?= $empleado->service->name ?></td>
                         <td>
                             <a href="<?= isset($_SESSION['user']) ? "/employee/edit/" . $empleado->id : "/employee/edit/" . $empleado->id ?>" class="btn btn-primary">
                                 <?= isset($_SESSION['user']) ? "Editar" : "Editar" ?></a>

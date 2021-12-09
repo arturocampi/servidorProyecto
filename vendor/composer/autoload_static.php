@@ -10,6 +10,7 @@ class ComposerStaticInit0c57e91e171406ba7b908955cb938194
         'S' => 
         array (
             'Svg\\' => 4,
+            'Src\\' => 4,
         ),
         'F' => 
         array (
@@ -34,6 +35,10 @@ class ComposerStaticInit0c57e91e171406ba7b908955cb938194
         'Svg\\' => 
         array (
             0 => __DIR__ . '/..' . '/phenx/php-svg-lib/src/Svg',
+        ),
+        'Src\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
         'FontLib\\' => 
         array (

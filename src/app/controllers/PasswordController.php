@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\Empleado;
+
 require "app/models/Empleado.php";
 
 class PasswordController

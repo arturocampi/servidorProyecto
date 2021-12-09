@@ -32,6 +32,16 @@
                     <label>Fecha de nacimiento</label>
                     <input type="text" name="birthdate" class="form-control" value="<?php echo $empleado->birthdate->format('Y-m-d') ?>">
                 </div>
+                <label>Servicios</label>
+                <div class="form-check">
+                    
+                    <?php
+                    foreach ($servicios  as $key => $service) {
+                        $selected = $empleado->id == $service->id ? 'checked' : ''; ?>
+                        <input class="form-check-input" type="checkbox" value="<? echo $service->id ?>" id="flexCheckDefault" <?= $selected ?>>
+                        <label class="form-check-label" for="flexCheckDefault"><?php echo $service->name ?></label><br>
+                    <?php } ?>
+                </div><br>
                 <div class="form-group">
                     <label>Contraseña</label>
                     <input type="password" name="password" class="form-control">
