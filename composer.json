@@ -1,6 +1,7 @@
 {
     "autoload": {
         "psr-4": {
+            "Src\\" : "src/",
             "Core\\": "html/core",
             "App\\Controllers\\": "html/app/controllers",
             "App\\Models\\": "html/app/models"

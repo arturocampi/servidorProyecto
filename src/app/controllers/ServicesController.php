@@ -33,14 +33,27 @@ class ServicesController
 
     public function store()
     {
-        $servicio = new Servicio();
-        $servicio->name = $_REQUEST['name'];
-        $servicio->gender = $_REQUEST['gender'];
-        $servicio->details = $_REQUEST['details'];
-        $servicio->price = $_REQUEST['price'];
-        $servicio->time = $_REQUEST['time'];
-        $servicio->insert();
+        $service = new Servicio();
+        $service->name = $_REQUEST['name'];
+        $service->gender = $_REQUEST['gender'];
+        $service->details = $_REQUEST['details'];
+        $service->price = $_REQUEST['price'];
+        $service->time = $_REQUEST['time'];
+        $service->insert();
         header('Location:/services/show');
+    }
+
+    public function update()
+    {
+        $id = $_REQUEST['id'];
+        $service = Servicio::find($id);
+        $service->name = $_REQUEST['name'];
+        $service->gender = $_REQUEST['gender'];
+        $service->details = $_REQUEST['details'];
+        $service->price = $_REQUEST['price'];
+        $service->time = $_REQUEST['time'];
+        $service->save();
+        header('location:/services/show');
     }
 
     public function delete($arguments)

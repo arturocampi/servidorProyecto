@@ -2,9 +2,10 @@
 
 namespace Core;
 
-require_once 'config/db.php';
+require 'config/db.php';
 
-use const Config\servername;
+use const Config\host;
+use const Config\port;
 use const Config\dbname;
 use const Config\username;
 use const Config\password;
@@ -16,16 +17,12 @@ class Model
     public static function connect()
     {
         try {
-            $dsn = 'mysql:dbname=' . dbname . ';host=' . servername . ';charset=utf8';
-            $db = new PDO($dsn, username, password);
-            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $dsn = 'mysql:host=' . host . ';dbname=' . dbname;
+            $pdo = new PDO($dsn, username, password);
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            return $pdo;
         } catch (PDOException $e) {
             echo 'Conexión fallida: ' . $e->getMessage();
         }
-        return $db;
     }
 }
-
-
-// $dsn = 'mysql:host=' . $_ENV['DB_HOST'] . ';dbname=' . $_ENV['MYSQL_DATABASE'];
-// $pdo = new PDO($dsn, $_ENV['MYSQL_USER'], $_ENV['MYSQL_ROOT_PASSWORD']);

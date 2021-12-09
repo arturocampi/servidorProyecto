@@ -10,7 +10,7 @@
     <main role="main" class="container">
         <div class="starter-template">
             <h1>Alta de empleado</h1>
-            <form method="post" action="/employee/store">
+            <form method="post" action="/employee/new">
                 <div class="form-group">
                     <label>Nombre</label>
                     <input type="text" name="name" class="form-control">
@@ -33,7 +33,11 @@
                 </div>
                 <div class="form-group">
                     <label>Contraseña</label>
+<<<<<<< HEAD
                     <input type="password" name="details" class="form-control">
+=======
+                    <input type="password" name="password" class="form-control">
+>>>>>>> arthur
                 </div>
                 <button type="submit" class="btn btn-default">Enviar</button>
             </form>

@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\Empleado;
+use App\Models\Servicio;
 use Dompdf\Dompdf;
 
 class EmployeeController
@@ -12,7 +13,7 @@ class EmployeeController
     {
         require 'app/views/login.php';
     }
-    
+
     public function create()
     {
         require 'app/views/employee/create.php';
@@ -20,7 +21,7 @@ class EmployeeController
 
     public function show()
     {
-        $empleados= Empleado::all();
+        $empleados = Empleado::all();
         require 'app/views/employee/index.php';
     }
 
@@ -28,10 +29,11 @@ class EmployeeController
     {
         $id = (int) $arguments[0];
         $empleado = Empleado::find($id);
+        $servicios = Servicio::all();
         require 'app/views/employee/edit.php';
     }
 
-    public function store()
+    public function new()
     {
         $emp = new Empleado();
         $emp->name = $_REQUEST['name'];
@@ -53,9 +55,29 @@ class EmployeeController
         $emp->email = $_REQUEST['email'];
         $emp->details = $_REQUEST['details'];
         $emp->birthdate = $_REQUEST['birthdate'];
+<<<<<<< HEAD
         $emp->password = $emp->encryptPassword($_REQUEST['password']);
         $emp->save();
         header('Location:/employee/show');
+=======
+        $newPass = $_REQUEST['password'];
+        if ((isset($newPass)) && (!empty($newPass))) {
+            $emp->password = $emp->setPassword($_REQUEST['password']);
+        }
+        $emp->save();
+        // Actualiza los servicios de la base de datos
+        $servicios = $_REQUEST['service'];
+        $emp->saveService($id,$servicios);
+        header('Location:/employee/show');
+    }
+
+    public function test()
+    {
+        $servicios = $_REQUEST['service'];
+        foreach ($servicios as $key => $servicio) {
+            echo $servicio . "<br>";
+        }
+>>>>>>> arthur
     }
 
     public function delete($arguments)
@@ -76,12 +98,12 @@ class EmployeeController
     {
         ob_start();
         $empleados = Empleado::all();
-        require_once ('app/views/employee/pdf.php');
+        require_once('app/views/employee/pdf.php');
         $html = ob_get_clean();
         $dompdf = new DOMPDF();
         $dompdf->setPaper('A4', 'landscape');
         $dompdf->loadHtml($html);
         $dompdf->render();
-        $dompdf->stream("Servicios.pdf", array("Attachment"=>0));
+        $dompdf->stream("Servicios.pdf", array("Attachment" => 0));
     }
 }

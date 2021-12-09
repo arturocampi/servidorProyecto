@@ -10,7 +10,7 @@
     <main role="main" class="container">
         <div class="starter-template">
             <h1>Edición de empleado</h1>
-            <form method="post" action="/employee/update">
+            <form method="post" action="/employee/update" class="mb-5">
                 <input type="hidden" name="id" value="<?php echo $empleado->id ?>">
                 <div class="form-group">
                     <label>Nombre</label>
@@ -32,6 +32,26 @@
                     <label>Fecha de nacimiento</label>
                     <input type="text" name="birthdate" class="form-control" value="<?php echo $empleado->birthdate->format('Y-m-d') ?>">
                 </div>
+<<<<<<< HEAD
+=======
+                <label>Servicios</label>
+                <div class="form-check">
+                    <?php
+                    foreach ($servicios as $key => $service) {
+                        if ($empleado->id == $service->id) {
+                            $selected = $empleado->id == $service->id ? 'checked' : ''; ?>
+                            <input class="form-check-input" name="service[]" type="checkbox" value="<?php echo $service->name ?>" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault"><?php echo $service->name ?></label><br>
+                        <?php
+                        } else {
+                        ?>
+                            <input class="form-check-input" name="service[]" type="checkbox" value="<?php echo $service->name ?>" id="flexCheckChecked" <?= $selected ?>>
+                            <label class="form-check-label" for="flexCheckChecked"><?php echo $service->name ?></label><br>
+                    <?php
+                        }
+                    } ?>
+                </div><br>
+>>>>>>> arthur
                 <div class="form-group">
                     <label>Contraseña</label>
                     <input type="password" name="password" class="form-control">

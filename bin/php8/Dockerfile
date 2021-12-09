@@ -6,3 +6,9 @@ RUN pecl install xdebug-3.0.0 && \
 
 # Enable apache modules
 RUN a2enmod rewrite headers
+
+# Other PHP8 Extensions
+RUN docker-php-ext-install pdo pdo_mysql
+
+# Cleanup
+RUN rm -rf /usr/src/*

@@ -39,11 +39,11 @@
 
         <?php foreach ($empleados as $key => $empleado) { ?>
             <tr>
-                <td><?php echo $empleado->name ?></td>
-                <td><?php echo $empleado->surname ?></td>
-                <td><?php echo $empleado->email ?></td>
-                <td><?php echo $empleado->details ?></td>
-                <td><?php echo $empleado->birthdate ?></td>
+                <td><?= $empleado->name ?></td>
+                <td><?= $empleado->surname ?></td>
+                <td><?= $empleado->email ?></td>
+                <td><?= $empleado->details ?></td>
+                <td><?= $empleado->birthdate->format('Y-m-d') ?></td>   
             </tr>
         <?php } ?>
     </table>

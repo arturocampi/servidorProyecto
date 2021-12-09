@@ -44,7 +44,21 @@ class Servicio extends Model
         return $stmt->execute();
     }
 
-    public function delete(){
+    public function save()
+    {
+        $db = Servicio::connect();
+        $stmt = $db->prepare('UPDATE service SET name = :name, gender = :gender, details = :details, price = :price, time = :time WHERE id = :id');
+        $stmt->bindValue(':id', $this->id);
+        $stmt->bindValue(':name', $this->name);
+        $stmt->bindValue(':gender', $this->gender);
+        $stmt->bindValue(':details', $this->details);
+        $stmt->bindValue(':price', $this->price);
+        $stmt->bindValue(':time', $this->time);
+        return $stmt->execute();
+    }
+
+    public function delete()
+    {
         $db = Servicio::connect();
         $stmt = $db->prepare('DELETE FROM service WHERE id = :id');
         $stmt->bindValue(':id', $this->id);

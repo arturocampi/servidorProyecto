@@ -1,4 +1,10 @@
 .env
+<<<<<<< HEAD
 .vscode
 vendor
 data
+=======
+/.vscode/
+/vendor/
+/data/
+>>>>>>> arthur
