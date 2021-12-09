@@ -34,7 +34,6 @@
                 </div>
                 <label>Servicios</label>
                 <div class="form-check">
-                    
                     <?php
                     foreach ($servicios as $key => $service) {
                         if ($empleado->id == $service->id) {

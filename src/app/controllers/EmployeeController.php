@@ -55,8 +55,11 @@ class EmployeeController
         $emp->email = $_REQUEST['email'];
         $emp->details = $_REQUEST['details'];
         $emp->birthdate = $_REQUEST['birthdate'];
-        $emp->service = $_REQUEST['service'];
-        $emp->password = $emp->setPassword($_REQUEST['password']);
+        // $emp->service = $_REQUEST['service'];
+        $newPass = $_REQUEST['password'];
+        if ((isset($newPass))&&(!empty($newPass))) {
+            $emp->password = $emp->setPassword($_REQUEST['password']);
+        }
         $emp->save();
         header('Location:/employee/show');
     }
