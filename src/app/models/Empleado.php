@@ -81,17 +81,11 @@ class Empleado extends Model
     public function service()
     {
         $db = Empleado::connect();
-        $stmt = $db->prepare('SELECT * FROM employee_service WHERE employee_id = :employee_id');
-        $stmt->bindValue(':employee_id', $this->id);
+        $stmt = $db->prepare('SELECT * FROM employee_service es join service s on (s.id= es.service_id) WHERE es.employee_id = :id');
+        $stmt->bindValue(':id', $this->id);
         $stmt->execute();
-        $stmt->setFetchMode(PDO::FETCH_CLASS, Servicio::class);
-        $employee_service = $stmt->fetch(PDO::FETCH_CLASS);
-        $stmt2 = $db->prepare('SELECT * FROM service WHERE id = :id');
-        $stmt2->bindValue(':id', $employee_service->service_id);
-        $stmt2->execute();
-        $stmt2->setFetchMode(PDO::FETCH_CLASS, Servicio::class);
-        $servicios = $stmt2->fetch(PDO::FETCH_CLASS);
-        return $servicios;
+        $employee_service = $stmt->fetchAll(PDO::FETCH_CLASS, Servicio::class);
+        return $employee_service;
     }
 
     public function setPassword($password)

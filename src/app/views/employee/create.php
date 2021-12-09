@@ -31,10 +31,7 @@
                     <label>Fecha de nacimiento</label>
                     <input type="text" name="birthdate" class="form-control">
                 </div>
-                <div class="form-group">
-                    <label>Contraseña</label>
-                    <input type="password" name="password" class="form-control">
-                </div>
+                tiger
                 <button type="submit" class="btn btn-default">Enviar</button>
             </form>
         </div>

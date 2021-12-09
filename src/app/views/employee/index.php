@@ -24,15 +24,19 @@
                     <th>Sercicios</th>
                     <th>Opciones</th>
                 </tr>
-
                 <?php foreach ($empleados as $key => $empleado) { ?>
+                    <?php $servicios = $empleado->service ?>
                     <tr>
                         <td><?= $empleado->name ?></td>
                         <td><?= $empleado->surname ?></td>
                         <td><?= $empleado->email ?></td>
                         <td><?= $empleado->details ?></td>
                         <td><?= $empleado->birthdate  ? $empleado->birthdate->format('Y-m-d') : 'nonato' ?></td>
-                        <td><?= $empleado->service->name ?></td>
+                        <td>
+                            <?php foreach ($servicios as $key => $servicio) { ?>
+                                <?= $servicio->name ?>
+                            <?php } ?>
+                        </td>
                         <td>
                             <a href="<?= isset($_SESSION['user']) ? "/employee/edit/" . $empleado->id : "/employee/edit/" . $empleado->id ?>" class="btn btn-primary">
                                 <?= isset($_SESSION['user']) ? "Editar" : "Editar" ?></a>
