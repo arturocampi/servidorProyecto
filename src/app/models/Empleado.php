@@ -60,7 +60,7 @@ class Empleado extends Model
         foreach ($nameServices as $nameService) {
             $index = ($nameService->id) - 1;
             if ($nameService->name == $servicios[$index]) {
-                $stmt = $db->prepare('UPDATE employee_service es join service s on (s.id= es.service_id) SET service_id = :service_id WHERE es.employee_id = :id');
+                $stmt = $db->prepare('UPDATE employee_service SET service_id = :service_id WHERE employee_id = :id');
                 $stmt->bindValue(':id', $id);
                 $stmt->bindValue(':service_id', $nameService->id);
                 return $stmt->execute();
