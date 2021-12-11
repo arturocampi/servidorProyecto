@@ -27,7 +27,11 @@ class EventoController
         $event->details = $_REQUEST['details'];
         $event->start_date = $_REQUEST['start_date'];
         $event->insert();
-        header('Location:/evento/');
+        if (isset($_SESSION['empleado'])) {
+            header('Location:/evento/');
+        }else{
+            header('Location:/evento/create');
+        }
     }
 
     public function edit($arguments)

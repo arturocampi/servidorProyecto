@@ -23,8 +23,8 @@
                     <input type="password" class="form-control" id="formGroupExampleInput" name="password">
                 </div>
                 <button type="submit" class="btn btn-primary">Login</button>
+                <a href="/home" class="btn btn-danger">Inicio</a>
             </form>
-            <p><a href='/home'>Inicio</a></p>
         </div>
         <div>
             <br />
