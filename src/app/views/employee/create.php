@@ -43,13 +43,10 @@
                 </div><br>
                 <div class="form-group">
                     <label>Contraseña</label>
-<<<<<<< HEAD
-                    <input type="password" name="details" class="form-control">
-=======
                     <input type="password" name="password" class="form-control">
->>>>>>> arthur
                 </div>
                 <button type="submit" class="btn btn-default">Enviar</button>
+                <a href="/employee" class="btn btn-danger">Atrás</a>
             </form>
         </div>
     </main><!-- /.container -->

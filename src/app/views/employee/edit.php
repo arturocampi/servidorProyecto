@@ -35,28 +35,23 @@
                 <label>Servicios</label>
                 <div class="form-check">
                     <?php
+                    $serviciosEmployee = [];
                     $empServices = $empleado->service;
+                    foreach ($empServices as $key => $empService) {
+                        $serviciosEmployee[] = $empService->service_id;
+                    }
                     foreach ($servicios as $key => $service) {
-                        foreach ($empServices as $key => $empService) {
-                            if ($empService->name == $service->name) {
-                                if ($empService->service_id == $service->id) { ?>
-                                    <input class="form-check-input" name="servicesid[]" type="checkbox" value="<?= $service->id ?>" id="flexCheckChecked" checked>
-                                    <label class="form-check-label" for="flexCheckChecked"><?= $service->name ?></label><br>
-                                <?php
-                                } else {
-                                ?>
-                                    <input class="form-check-input" name="servicesid[]" type="checkbox" value="<?= $service->id ?>" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault"><?= $service->name ?></label><br>
-                                <?php
-                                }
-                            }
-                            if ($empService->name != $service->name) { ?>
-                                <input class="form-check-input" name="servicesid[]" type="checkbox" value="<?= $service->id ?>" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault"><?= $service->name ?></label><br>
-                    <?php
-                            }
-                           
+                        if (in_array($service->id, $serviciosEmployee)) { ?>
+                            <input class="form-check-input" name="servicesid[]" type="checkbox" value="<?= $service->id ?>" checked>
+                            <label class="form-check-label"><?= $service->name ?></label><br>
+                        <?php
+                        } else { ?>
+                            <input class="form-check-input" name="servicesid[]" type="checkbox" value="<?= $service->id ?>">
+                            <label class="form-check-label"><?= $service->name ?></label><br>
+                        <?php
                         }
+                        ?>
+                    <?php
                     }
                     ?>
                 </div><br>
@@ -65,6 +60,7 @@
                     <input type="password" name="password" class="form-control">
                 </div>
                 <button type="submit" class="btn btn-default">Enviar</button>
+                <a href="/employee" class="btn btn-danger">Atrás</a>
             </form>
         </div>
     </main><!-- /.container -->

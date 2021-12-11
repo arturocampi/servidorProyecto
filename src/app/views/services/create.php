@@ -40,6 +40,7 @@
                     <input type="number" name="time" class="form-control">
                 </div>
                 <button type="submit" class="btn btn-default">Enviar</button>
+                <a href="/services" class="btn btn-danger">Atrás</a>
             </form>
         </div>
 

@@ -6,41 +6,41 @@
 </head>
 
 <body>
+
     <?php require "app/views/parts/header.php" ?>
+
     <main role="main" class="container">
         <div class="starter-template">
-            <h1>Lista de empleados</h1>
-            <p>
-                <a href="/employee/pdf" class="btn btn-success">Pdf</a>
-            </p>
-            <table class="table table-striped table-hover">
-                <tr>
-                    <th>Nombre</th>
-                    <th>Apellidos</th>
-                    <th>Email</th>
-                    <th>Detalles</th>
-                    <th>Fecha de Nacimiento</th>
-                    <th>Sercicios</th>
-                </tr>
-                <?php foreach ($empleados as $key => $empleado) { ?>
-                    <?php $servicios = $empleado->service ?>
-                    <tr>
-                        <td><?= $empleado->name ?></td>
-                        <td><?= $empleado->surname ?></td>
-                        <td><?= $empleado->email ?></td>
-                        <td><?= $empleado->details ?></td>
-                        <td><?= $empleado->birthdate  ? $empleado->birthdate->format('Y-m-d') : 'nonato' ?></td>
-                        <td>
-                            <?php foreach ($servicios as $key => $servicio) { ?>
-                                <?= $servicio->name ?>
-                            <?php } ?>
-                        </td>
-                    </tr>
-                <?php } ?>
-            </table>
+            <h1>Detalle del empleado <?= $empleado->id ?></h1>
+            <ul>
+                <li><strong>Nombre: </strong><?= $empleado->name ?></li>
+                <li><strong>Apellidos: </strong><?= $empleado->surname ?></li>
+                <li><strong>Email: </strong><?= $empleado->email ?></li>
+                <li><strong>F. nacimiento: </strong><?= $empleado->birthdate->format('d-m-Y') ?></li>
+                <li><strong>Servicios: </strong>
+                    <?php
+                    $employeeServices = $empleado->service;
+                    $arrEmpServices = [];
+                    foreach ($employeeServices as $employeeService) {
+                        array_push($arrEmpServices, $employeeService->id);
+                    }
+                    foreach ($servicios as $key => $servicio) {
+                        if (in_array($servicio->id, $arrEmpServices)) {
+                            echo '<ol>' . $servicio->name  . '</ol>';
+                        }
+                    }
+                    ?>
+                </li>
+            </ul>
+            <form method="post" action="/employee" class="mb-5">
+                <button type="submit" class="btn btn-danger">Atrás</button>
+            </form>
         </div>
-    </main><!-- /.container -->
+
+    </main>
     <?php require "app/views/parts/footer.php" ?>
+
+
 </body>
 <?php require "app/views/parts/scripts.php" ?>
 

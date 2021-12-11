@@ -33,6 +33,7 @@
                     <input type="number" name="price" class="form-control">
                 </div>
                 <button type="submit" class="btn btn-default">Enviar</button>
+                <a href="<?= "/detalle/index/" . $id ?>" class="btn btn-danger">Atrás</a>
             </form>
         </div>
     </main><!-- /.container -->

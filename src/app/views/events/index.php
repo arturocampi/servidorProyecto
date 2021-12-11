@@ -30,8 +30,8 @@
                         <td><?php echo $evento->details ?></td>
                         <td><?php echo $evento->start_date ?></td>
                         <td>
-                            <a href="<?= isset($_SESSION['empleado']) ? "/evento/edit/" . $evento->id : "" ?>" class="btn btn-primary">Editar</a>
                             <a href="<?= isset($_SESSION['empleado']) ? "/detalle/index/" . $evento->id : "" ?>" class="btn btn-warning">Ver</a>
+                            <a href="<?= isset($_SESSION['empleado']) ? "/evento/edit/" . $evento->id : "" ?>" class="btn btn-primary">Editar</a>
                             <a href="<?= isset($_SESSION['empleado']) ? "/evento/delete/" . $evento->id : "" ?> " class="btn btn-danger">Borrar</a>
                         </td>
                     </tr>

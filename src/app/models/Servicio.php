@@ -28,8 +28,25 @@ class Servicio extends Model
         $stmt->execute(array(':id' => $id));
         $stmt->setFetchMode(PDO::FETCH_CLASS, Servicio::class);
         $servicio = $stmt->fetch(PDO::FETCH_CLASS);
-        // echo $this->birthdate->format('d-m-y');
         return $servicio;
+    }
+
+    public function __get($atributoDesconocido)
+    {
+        if (method_exists($this, $atributoDesconocido)) {
+            $this->$atributoDesconocido = $this->$atributoDesconocido();
+            return $this->$atributoDesconocido;
+        }
+    }
+
+    public function employee()
+    {
+        $db = Servicio::connect();
+        $stmt = $db->prepare('SELECT * FROM employee_service es join employee e on (e.id = es.employee_id) WHERE es.service_id = :id');
+        $stmt->bindValue(':id', $this->id);
+        $stmt->execute();
+        $service_employee = $stmt->fetchAll(PDO::FETCH_CLASS, Empleado::class);
+        return $service_employee;
     }
 
     public function insert()
@@ -62,6 +79,14 @@ class Servicio extends Model
         $db = Servicio::connect();
         $stmt = $db->prepare('DELETE FROM service WHERE id = :id');
         $stmt->bindValue(':id', $this->id);
+        return $stmt->execute();
+    }
+
+    public function deleteEmployee()
+    {
+        $db = Servicio::connect();
+        $stmt = $db->prepare('DELETE FROM employee_service WHERE service_id = :id');
+        $stmt->bindValue('id', $this->id);
         return $stmt->execute();
     }
 }

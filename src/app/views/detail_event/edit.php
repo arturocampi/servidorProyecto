@@ -30,6 +30,7 @@
                     <input type="number" name="price" class="form-control" value="<?php echo $detalle->price ?>">
                 </div>
                 <button type="submit" class="btn btn-default">Enviar</button>
+                <a href="<?= "/detalle/index/" . $detalle->event_id ?>" class="btn btn-danger">Atrás</a>
             </form>
         </div>
     </main><!-- /.container -->

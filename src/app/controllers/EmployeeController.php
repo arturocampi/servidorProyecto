@@ -11,7 +11,9 @@ class EmployeeController
 
     public function index()
     {
-        require 'app/views/login.php';
+        // require 'app/views/login.php';
+        $empleados = Empleado::all();
+        require 'app/views/employee/index.php';
     }
 
     public function create()
@@ -20,16 +22,18 @@ class EmployeeController
         require 'app/views/employee/create.php';
     }
 
-    public function show()
+    public function show($arguments)
     {
-        $empleados = Empleado::all();
-        require 'app/views/employee/index.php';
+        $id = (int) $arguments[0];
+        $empleado = Empleado::find($id);
+        $servicios = Servicio::all();
+        require 'app/views/employee/show.php';
     }
 
     public function showCliente()
     {
         $empleados = Empleado::all();
-        require 'app/views/employee/show.php';
+        require 'app/views/employee/showCliente.php';
     }
 
     public function edit($arguments)
@@ -55,7 +59,7 @@ class EmployeeController
             $empleado = Empleado::findbyEmail($emp->email);
             $empleado->saveService($empleado->id, $servicios_id);
         }
-        header('Location:/employee/show');
+        header('Location:/employee');
     }
 
     public function update()
@@ -77,7 +81,7 @@ class EmployeeController
             $servicios_id = $_REQUEST['servicesid'];
             $emp->saveService($id, $servicios_id);
         }
-        header('Location:/employee/show');
+        header('Location:/employee');
     }
 
     public function test()
@@ -94,7 +98,7 @@ class EmployeeController
         $empleado = Empleado::find($id);
         $empleado->deleteServices();
         $empleado->delete();
-        header('Location:/employee/show');
+        header('Location:/employee');
     }
 
     public function logout()

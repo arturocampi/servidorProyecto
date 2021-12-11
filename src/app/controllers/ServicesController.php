@@ -3,20 +3,29 @@
 namespace App\Controllers;
 
 use App\Models\Servicio;
+use App\Models\Empleado;
 use Dompdf\Dompdf;
 
 class ServicesController
 {
-    public function show()
+    public function index()
     {
         $servicios = Servicio::all();
         require 'app/views/services/index.php';
     }
 
+    public function show($arguments)
+    {
+        $id = (int) $arguments[0];
+        $servicio = Servicio::find($id);
+        $empleados = Empleado::all();
+        require 'app/views/services/show.php';
+    }
+
     public function showCliente()
     {
         $servicios = Servicio::all();
-        require 'app/views/services/show.php';
+        require 'app/views/services/showCliente.php';
     }
 
     public function new()
@@ -40,7 +49,7 @@ class ServicesController
         $service->price = $_REQUEST['price'];
         $service->time = $_REQUEST['time'];
         $service->insert();
-        header('Location:/services/show');
+        header('Location:/services');
     }
 
     public function update()
@@ -53,27 +62,28 @@ class ServicesController
         $service->price = $_REQUEST['price'];
         $service->time = $_REQUEST['time'];
         $service->save();
-        header('location:/services/show');
+        header('location:/services');
     }
 
     public function delete($arguments)
     {
         $id = (int) $arguments[0];
         $servicio = Servicio::find($id);
+        $servicio->deleteEmployee();
         $servicio->delete();
-        header('Location:/services/show');
+        header('Location:/services');
     }
 
     public function pdf()
     {
         ob_start();
         $servicios = Servicio::all();
-        require_once ('app/views/services/pdf.php');
+        require_once('app/views/services/pdf.php');
         $html = ob_get_clean();
         $dompdf = new DOMPDF();
         $dompdf->setPaper('A4', 'landscape');
         $dompdf->loadHtml($html);
         $dompdf->render();
-        $dompdf->stream("Servicios.pdf", array("Attachment"=>0));
+        $dompdf->stream("Servicios.pdf", array("Attachment" => 0));
     }
 }

@@ -10,10 +10,10 @@
         <a class="nav-link" href="<?= isset($_SESSION['empleado']) ? "/evento" : "/evento/create" ?>">Citas Eventos</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="<?= isset($_SESSION['empleado']) ? "/employee/show" : "/employee/showCliente" ?>">Nuestros Empleados</a>
+        <a class="nav-link" href="<?= isset($_SESSION['empleado']) ? "/employee" : "/employee/showCliente" ?>">Nuestros Empleados</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="<?= isset($_SESSION['empleado']) ? "/services/show" : "/services/showCliente" ?>">Nuestro Servicios</a>
+        <a class="nav-link" href="<?= isset($_SESSION['empleado']) ? "/services" : "/services/showCliente" ?>">Nuestro Servicios</a>
       </li>
     </ul>
     <ul class="navbar-nav">
