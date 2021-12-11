@@ -118,7 +118,6 @@ class Empleado extends Model
     }
 
     public function encryptPassword($pass)
-<<<<<<< HEAD
     {
         $password = password_hash($pass, PASSWORD_BCRYPT);
         return $password;
@@ -126,15 +125,6 @@ class Empleado extends Model
 
     public static function passwordVerify($pass, $empleado)
     {
-=======
-    {
-        $password = password_hash($pass, PASSWORD_BCRYPT);
-        return $password;
-    }
-
-    public static function passwordVerify($pass, $empleado)
-    {
->>>>>>> arthur
         return password_verify($pass, $empleado->password);
     }
 

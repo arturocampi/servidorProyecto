@@ -55,11 +55,6 @@ class EmployeeController
         $emp->email = $_REQUEST['email'];
         $emp->details = $_REQUEST['details'];
         $emp->birthdate = $_REQUEST['birthdate'];
-<<<<<<< HEAD
-        $emp->password = $emp->encryptPassword($_REQUEST['password']);
-        $emp->save();
-        header('Location:/employee/show');
-=======
         $newPass = $_REQUEST['password'];
         if ((isset($newPass)) && (!empty($newPass))) {
             $emp->password = $emp->setPassword($_REQUEST['password']);
@@ -77,7 +72,6 @@ class EmployeeController
         foreach ($servicios as $key => $servicio) {
             echo $servicio . "<br>";
         }
->>>>>>> arthur
     }
 
     public function delete($arguments)

@@ -32,8 +32,6 @@
                     <label>Fecha de nacimiento</label>
                     <input type="text" name="birthdate" class="form-control" value="<?php echo $empleado->birthdate->format('Y-m-d') ?>">
                 </div>
-<<<<<<< HEAD
-=======
                 <label>Servicios</label>
                 <div class="form-check">
                     <?php
@@ -51,7 +49,6 @@
                         }
                     } ?>
                 </div><br>
->>>>>>> arthur
                 <div class="form-group">
                     <label>Contraseña</label>
                     <input type="password" name="password" class="form-control">
