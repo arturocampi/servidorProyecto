@@ -16,6 +16,7 @@ class EmployeeController
 
     public function create()
     {
+        $servicios = Servicio::all();
         require 'app/views/employee/create.php';
     }
 
@@ -23,6 +24,12 @@ class EmployeeController
     {
         $empleados = Empleado::all();
         require 'app/views/employee/index.php';
+    }
+
+    public function showCliente()
+    {
+        $empleados = Empleado::all();
+        require 'app/views/employee/show.php';
     }
 
     public function edit($arguments)
@@ -43,6 +50,11 @@ class EmployeeController
         $emp->birthdate = $_REQUEST['birthdate'];
         $emp->password = $emp->encryptPassword($_REQUEST['password']);
         $emp->insert();
+        if ((isset($_REQUEST['servicesid'])) && (!empty($_REQUEST['servicesid']))) {
+            $servicios_id = $_REQUEST['servicesid'];
+            $empleado = Empleado::findbyEmail($emp->email);
+            $empleado->saveService($empleado->id, $servicios_id);
+        }
         header('Location:/employee/show');
     }
 
@@ -61,8 +73,10 @@ class EmployeeController
         }
         $emp->save();
         // Actualiza los servicios de la base de datos
-        $servicios = $_REQUEST['service'];
-        $emp->saveService($id,$servicios);
+        if ((isset($_REQUEST['servicesid'])) && (!empty($_REQUEST['servicesid']))) {
+            $servicios_id = $_REQUEST['servicesid'];
+            $emp->saveService($id, $servicios_id);
+        }
         header('Location:/employee/show');
     }
 
@@ -78,6 +92,7 @@ class EmployeeController
     {
         $id = (int) $arguments[0];
         $empleado = Empleado::find($id);
+        $empleado->deleteServices();
         $empleado->delete();
         header('Location:/employee/show');
     }

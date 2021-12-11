@@ -27,23 +27,21 @@
 
 <body>
 
-    <h1>Lista de servicios</h1>
+    <h1>Lista de eventos</h1>
     <table class="table table-striped table-hover">
         <tr>
             <th>Nombre</th>
-            <th>Genero</th>
+            <th>Cliente</th>
             <th>Detalles</th>
-            <th>Precio</th>
-            <th>Tiempo</th>
+            <th>Fecha</th>
         </tr>
 
-        <?php foreach ($servicios as $key => $servicio) { ?>
+        <?php foreach ($eventos as $key => $evento) { ?>
             <tr>
-                <td><?= $servicio->name ?></td>
-                <td><?= $servicio->gender ?></td>
-                <td><?= $servicio->details ?></td>
-                <td><?= $servicio->price ?></td>
-                <td><?= $servicio->time ?></td>
+                <td><?= $evento->name ?></td>
+                <td><?= $evento->client ?></td>
+                <td><?= $evento->details ?></td>
+                <td><?= $evento->start_date ?></td>
             </tr>
         <?php } ?>
     </table>

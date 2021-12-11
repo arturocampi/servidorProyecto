@@ -11,43 +11,54 @@
         <div class="starter-template">
             <h1>Edición de empleado</h1>
             <form method="post" action="/employee/update" class="mb-5">
-                <input type="hidden" name="id" value="<?php echo $empleado->id ?>">
+                <input type="hidden" name="id" value="<?= $empleado->id ?>">
                 <div class="form-group">
                     <label>Nombre</label>
-                    <input type="text" name="name" class="form-control" value="<?php echo $empleado->name ?>">
+                    <input type="text" name="name" class="form-control" value="<?= $empleado->name ?>">
                 </div>
                 <div class="form-group">
                     <label>Apellidos</label>
-                    <input type="text" name="surname" class="form-control" value="<?php echo $empleado->surname ?>">
+                    <input type="text" name="surname" class="form-control" value="<?= $empleado->surname ?>">
                 </div>
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="text" name="email" class="form-control" value="<?php echo $empleado->email ?>">
+                    <input type="text" name="email" class="form-control" value="<?= $empleado->email ?>">
                 </div>
                 <div class="form-group">
                     <label>Detalles</label>
-                    <input type="text" name="details" class="form-control" value="<?php echo $empleado->details ?>">
+                    <input type="text" name="details" class="form-control" value="<?= $empleado->details ?>">
                 </div>
                 <div class="form-group">
                     <label>Fecha de nacimiento</label>
-                    <input type="text" name="birthdate" class="form-control" value="<?php echo $empleado->birthdate->format('Y-m-d') ?>">
+                    <input type="text" name="birthdate" class="form-control" value="<?= $empleado->birthdate->format('Y-m-d') ?>">
                 </div>
                 <label>Servicios</label>
                 <div class="form-check">
                     <?php
+                    $empServices = $empleado->service;
                     foreach ($servicios as $key => $service) {
-                        if ($empleado->id == $service->id) {
-                            $selected = $empleado->id == $service->id ? 'checked' : ''; ?>
-                            <input class="form-check-input" name="service[]" type="checkbox" value="<?php echo $service->name ?>" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault"><?php echo $service->name ?></label><br>
-                        <?php
-                        } else {
-                        ?>
-                            <input class="form-check-input" name="service[]" type="checkbox" value="<?php echo $service->name ?>" id="flexCheckChecked" <?= $selected ?>>
-                            <label class="form-check-label" for="flexCheckChecked"><?php echo $service->name ?></label><br>
+                        foreach ($empServices as $key => $empService) {
+                            if ($empService->name == $service->name) {
+                                if ($empService->service_id == $service->id) { ?>
+                                    <input class="form-check-input" name="servicesid[]" type="checkbox" value="<?= $service->id ?>" id="flexCheckChecked" checked>
+                                    <label class="form-check-label" for="flexCheckChecked"><?= $service->name ?></label><br>
+                                <?php
+                                } else {
+                                ?>
+                                    <input class="form-check-input" name="servicesid[]" type="checkbox" value="<?= $service->id ?>" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault"><?= $service->name ?></label><br>
+                                <?php
+                                }
+                            }
+                            if ($empService->name != $service->name) { ?>
+                                <input class="form-check-input" name="servicesid[]" type="checkbox" value="<?= $service->id ?>" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault"><?= $service->name ?></label><br>
                     <?php
+                            }
+                           
                         }
-                    } ?>
+                    }
+                    ?>
                 </div><br>
                 <div class="form-group">
                     <label>Contraseña</label>

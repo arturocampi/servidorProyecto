@@ -16,7 +16,7 @@ class ServicesController
     public function showCliente()
     {
         $servicios = Servicio::all();
-        require 'app/views/services/indexCliente.php';
+        require 'app/views/services/show.php';
     }
 
     public function new()

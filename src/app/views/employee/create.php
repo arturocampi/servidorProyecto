@@ -31,6 +31,16 @@
                     <label>Fecha de nacimiento</label>
                     <input type="text" name="birthdate" class="form-control">
                 </div>
+                <label>Servicios</label>
+                <div class="form-check">
+                    <?php
+                    foreach ($servicios as $key => $service) { ?>
+                        <input class="form-check-input" name="servicesid[]" type="checkbox" value="<?= $service->id ?>" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault"><?= $service->name ?></label><br>
+                    <?php
+                    }
+                    ?>
+                </div><br>
                 <div class="form-group">
                     <label>Contraseña</label>
 <<<<<<< HEAD

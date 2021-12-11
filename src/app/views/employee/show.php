@@ -11,7 +11,6 @@
         <div class="starter-template">
             <h1>Lista de empleados</h1>
             <p>
-                <a href="/employee/create" class="btn btn-primary">Nuevo</a>
                 <a href="/employee/pdf" class="btn btn-success">Pdf</a>
             </p>
             <table class="table table-striped table-hover">
@@ -22,7 +21,6 @@
                     <th>Detalles</th>
                     <th>Fecha de Nacimiento</th>
                     <th>Sercicios</th>
-                    <th>Opciones</th>
                 </tr>
                 <?php foreach ($empleados as $key => $empleado) { ?>
                     <?php $servicios = $empleado->service ?>
@@ -36,12 +34,6 @@
                             <?php foreach ($servicios as $key => $servicio) { ?>
                                 <?= $servicio->name ?>
                             <?php } ?>
-                        </td>
-                        <td>
-                            <a href="<?= isset($_SESSION['empleado']) ? "/employee/edit/" . $empleado->id : "" ?> " class="btn btn-primary">
-                                <?= isset($_SESSION['empleado']) ? "Editar" : "Editar" ?></a>
-                            <a href="<?= isset($_SESSION['empleado']) ? "/employee/delete/" . $empleado->id : "" ?> " class="btn btn-danger">
-                                <?= isset($_SESSION['empleado']) ? "Borrar" : "Borrar" ?></a>
                         </td>
                     </tr>
                 <?php } ?>

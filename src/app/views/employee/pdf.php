@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <style>
         h1 {
-            color: red;
+            color: grey;
         }
 
         table,
@@ -35,15 +35,22 @@
             <th>Email</th>
             <th>Detalles</th>
             <th>Fecha de Nacimiento</th>
+            <th>Servicios</th>
         </tr>
 
         <?php foreach ($empleados as $key => $empleado) { ?>
+            <?php $servicios = $empleado->service ?>
             <tr>
                 <td><?= $empleado->name ?></td>
                 <td><?= $empleado->surname ?></td>
                 <td><?= $empleado->email ?></td>
                 <td><?= $empleado->details ?></td>
-                <td><?= $empleado->birthdate->format('Y-m-d') ?></td>   
+                <td><?= $empleado->birthdate->format('Y-m-d') ?></td>
+                <td>
+                    <?php foreach ($servicios as $key => $servicio) { ?>
+                        <?= $servicio->name ?>
+                    <?php } ?>
+                </td>
             </tr>
         <?php } ?>
     </table>

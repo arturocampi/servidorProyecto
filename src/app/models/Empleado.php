@@ -51,20 +51,15 @@ class Empleado extends Model
         return $stmt->execute();
     }
 
-    public function saveService($id, $servicios)
+    public function saveService($employee_id, $serviciosId)
     {
         $db = Empleado::connect();
-        $sql = 'SELECT * FROM service';
-        $statement  = $db->query($sql);
-        $nameServices = $statement->fetchAll(PDO::FETCH_CLASS, Servicio::class);
-        foreach ($nameServices as $nameService) {
-            $index = ($nameService->id) - 1;
-            if ($nameService->name == $servicios[$index]) {
-                $stmt = $db->prepare('UPDATE employee_service es join service s on (s.id= es.service_id) SET service_id = :service_id WHERE es.employee_id = :id');
-                $stmt->bindValue(':id', $id);
-                $stmt->bindValue(':service_id', $nameService->id);
-                return $stmt->execute();
-            }
+        $stmt = $db->prepare('DELETE FROM employee_service WHERE employee_id = :id');
+        $stmt->bindValue(':id', $employee_id);
+        $stmt->execute();
+        foreach ($serviciosId as $service_id) {
+            $stmt2 = $db->prepare('INSERT INTO employee_service(employee_id , service_id) VALUES( :employee_id ,  :service_id)');
+            $stmt2->execute(array(':employee_id' => $employee_id, ':service_id' => $service_id));
         }
     }
 
@@ -132,6 +127,13 @@ class Empleado extends Model
     {
         $db = Empleado::connect();
         $stmt = $db->prepare('DELETE FROM employee WHERE id = :id');
+        $stmt->bindValue(':id', $this->id);
+        return $stmt->execute();
+    }
+
+    public function deleteServices(){
+        $db = Empleado::connect();
+        $stmt = $db->prepare('DELETE FROM employee_service WHERE employee_id = :id');
         $stmt->bindValue(':id', $this->id);
         return $stmt->execute();
     }
