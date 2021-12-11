@@ -5,7 +5,6 @@ namespace Core;
 require 'config/db.php';
 
 use const Config\host;
-use const Config\port;
 use const Config\dbname;
 use const Config\username;
 use const Config\password;

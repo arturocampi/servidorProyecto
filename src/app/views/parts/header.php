@@ -7,23 +7,16 @@
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="/evento">Citas Eventos</a>
+        <a class="nav-link" href="<?= isset($_SESSION['empleado']) ? "/evento" : "/evento/create" ?>">Citas Eventos</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="/cita">Citas Clientes</a>
+        <a class="nav-link" href="<?= isset($_SESSION['empleado']) ? "/employee/show" : "/employee/showCliente" ?>">Nuestros Empleados</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="<?= isset($_SESSION['empleado']) ? "/services/show" : "/services/showCliente" ?>">
-          Nuestro Servicios</a>
+        <a class="nav-link" href="<?= isset($_SESSION['empleado']) ? "/services/show" : "/services/showCliente" ?>">Nuestro Servicios</a>
       </li>
     </ul>
-
-
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="<?= isset($_SESSION['empleado']) ? "/employee/show" : "" ?>">
-          <?= isset($_SESSION['empleado']) ? "Empleados" : "" ?></a>
-      </li>
       <li class="nav-item active">
         <a class="nav-link" href="<?= isset($_SESSION['empleado']) ? "/login/logout" : "/login" ?>">
           <?= isset($_SESSION['empleado']) ? "Logout" : "Login" ?></a>

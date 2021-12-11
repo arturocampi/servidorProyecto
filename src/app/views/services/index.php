@@ -12,7 +12,7 @@
             <h1>Lista de servicios</h1>
             <p>
                 <a href="/services/new" class="btn btn-primary">Nuevo</a>
-                <a href="/services/pdf" class="btn btn-primary">Pdf</a>
+                <a href="/services/pdf" class="btn btn-success">Pdf</a>
             </p>
             <table class="table table-striped table-hover">
                 <tr>
