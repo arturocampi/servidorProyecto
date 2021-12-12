@@ -13,6 +13,7 @@
             <p>
                 <a href="/services/new" class="btn btn-primary">Nuevo</a>
                 <a href="/services/pdf" class="btn btn-success">Pdf</a>
+                <a href="/home/admin" class="btn btn-danger">Atrás</a>
             </p>
             <table class="table table-striped table-hover">
                 <tr>

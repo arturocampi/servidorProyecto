@@ -28,7 +28,7 @@
                     <input type="date" name="start_date" class="form-control">
                 </div>
                 <button type="submit" class="btn btn-default">Enviar</button>
-                <a href="/evento" class="btn btn-danger">Atrás</a>
+                <a href="<?= isset($_SESSION['empleado']) ? '/evento' : '/home' ?>" class="btn btn-danger">Atrás</a>
             </form>
         </div>
     </main><!-- /.container -->

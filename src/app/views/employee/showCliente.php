@@ -12,6 +12,7 @@
             <h1>Lista de empleados</h1>
             <p>
                 <a href="/employee/pdf" class="btn btn-success">Pdf</a>
+                <a href="/home" class="btn btn-danger">Atrás</a>
             </p>
             <table class="table table-striped table-hover">
                 <tr>

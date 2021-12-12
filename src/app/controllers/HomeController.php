@@ -8,4 +8,8 @@ class HomeController
     {
         require 'app/views/home.php';
     }
+
+    public function admin(){
+        require 'app/views/admin.php';
+    }
 }
