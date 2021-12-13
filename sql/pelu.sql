@@ -3,11 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: database:3306
-<<<<<<< HEAD
--- Generation Time: Dec 02, 2021 at 05:01 PM
-=======
 -- Generation Time: Dec 09, 2021 at 10:44 AM
->>>>>>> arthur
 -- Server version: 8.0.27
 -- PHP Version: 7.4.20
 
@@ -71,12 +67,8 @@ CREATE TABLE `employee` (
 --
 
 INSERT INTO `employee` (`id`, `name`, `surname`, `email`, `details`, `birthdate`, `password`, `active`, `admin`) VALUES
-<<<<<<< HEAD
-(1, 'Ana', 'Navarro', 'ana@pelu.com', 'Ana es la responsable del centro desde sus inicios. Es creativa y emprendedora, le encanta aportar nuevas ideas.', '2001-04-01', '$2y$10$b4qbj8k0CNQ0DW4nFfcVQeEMGHfHvryyKdSEThdTavgMamYKWv4fa', 0, 1);
-=======
 (1, 'Ana', 'Navarro', 'ana@pelu.com', 'Ana es la responsable del centro desde sus inicios. Es creativa y emprendedora, le encanta aportar nuevas ideas.', '2001-04-01', '$2y$10$14kZ/Nbxor1VUCMoxVlfWO8g4nCcrIac3tFXhZpTzghvYzuH7iDvu', 0, 1),
 (2, 'admin', 'admin', 'admin@admin.com', 'admin', '2020-04-04', '$2y$10$4/FrTDCqHBOqbqRzZKz1TuJySygxpIyIF5QmvlnFmRuCvUtvqAOt6', 0, 1);
->>>>>>> arthur
 
 -- --------------------------------------------------------
 
@@ -94,13 +86,8 @@ CREATE TABLE `employee_service` (
 --
 
 INSERT INTO `employee_service` (`employee_id`, `service_id`) VALUES
-<<<<<<< HEAD
-(1, 1),
-(1, 2);
-=======
 (1, 2),
 (1, 3);
->>>>>>> arthur
 
 -- --------------------------------------------------------
 
@@ -191,11 +178,7 @@ ALTER TABLE `service`
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-<<<<<<< HEAD
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-=======
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
->>>>>>> arthur
 
 --
 -- AUTO_INCREMENT for table `event`
