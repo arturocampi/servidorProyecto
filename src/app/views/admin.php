@@ -9,7 +9,7 @@
     <?php require "app/views/parts/head.php" ?>
 </head>
 
-<body>
+<body style="background-color: #efa693;">
     <?php require "app/views/parts/header.php" ?>
     <main role="main" class="container">
         <div class="starter-template">
