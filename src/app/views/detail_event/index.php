@@ -16,6 +16,7 @@
                 <a href="/evento/" class="btn btn-danger">Atrás</a>
             </p>
             <table class="table table-striped table-hover">
+            <thead class="thead-dark bg-dark text-white">
                 <tr>
                     <th>Número</th>
                     <th>Nombre</th>
@@ -24,7 +25,7 @@
                     <th>Precio</th>
                     <th>Opciones</th>
                 </tr>
-
+            </thead>
 
                 <?php foreach ($detalles as $key => $detalle) { ?>
                     <tr>

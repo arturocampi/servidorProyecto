@@ -13,7 +13,7 @@
     <?php require "app/views/parts/header.php" ?>
     <main role="main" class="container">
         <div class="starter-template">
-            <h1>Acceso Admin</h1>
+            <h1>Acceso Empleado</h1>
             <div class="alert alert-primary">
                 Acceso a modificación y creación de eventos
             </div>

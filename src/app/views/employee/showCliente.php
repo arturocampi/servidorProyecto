@@ -15,6 +15,7 @@
                 <a href="/home" class="btn btn-danger">Atrás</a>
             </p>
             <table class="table table-striped table-hover">
+            <thead class="thead-dark bg-dark text-white">
                 <tr>
                     <th>Nombre</th>
                     <th>Apellidos</th>
@@ -23,6 +24,7 @@
                     <th>Fecha de Nacimiento</th>
                     <th>Sercicios</th>
                 </tr>
+            </thead>
                 <?php foreach ($empleados as $key => $empleado) { ?>
                     <?php $servicios = $empleado->service ?>
                     <tr>

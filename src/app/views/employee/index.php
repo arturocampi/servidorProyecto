@@ -16,6 +16,7 @@
                 <a href="/home/admin" class="btn btn-danger">Atrás</a>
             </p>
             <table class="table table-striped table-hover">
+            <thead class="thead-dark bg-dark text-white">
                 <tr>
                     <th>Nombre</th>
                     <th>Apellidos</th>
@@ -25,6 +26,7 @@
                     <th>Sercicios</th>
                     <th>Opciones</th>
                 </tr>
+            </thead>
                 <?php foreach ($empleados as $key => $empleado) { ?>
                     <?php $servicios = $empleado->service ?>
                     <tr>
